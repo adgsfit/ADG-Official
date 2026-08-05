@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+._*
+
+# Editor / export artifacts
+.thumbnail
+
+# Netlify
+.netlify/
+
+# Local source material (brand files, charter, reference screenshots) — not deployed
+uploads/
