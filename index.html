@@ -164,11 +164,11 @@
 
         @keyframes adgFade {
           from {
-            opacity: 0
+            opacity: 0;
           }
 
           to {
-            opacity: 1
+            opacity: 1;
           }
         }
 
@@ -187,32 +187,6 @@
             transform: none
           }
         }
-
-        @keyframes adgDrift {
-          from {
-            background-position: 0 0
-          }
-
-          to {
-            background-position: 80px 80px
-          }
-        }
-
-        @keyframes adgWiggle {
-
-          0%,
-          100% {
-            transform: rotate(0)
-          }
-
-          25% {
-            transform: rotate(-7deg)
-          }
-
-          75% {
-            transform: rotate(7deg)
-          }
-        }
       </style>
     </helmet>
     <div ref="{{ rootRef }}">
@@ -222,7 +196,7 @@
           style="border-bottom:1px solid transparent;transition:background .35s ease,padding .35s ease,box-shadow .35s ease,border-color .35s ease;padding:18px 0">
           <div
             style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px);display:flex;align-items:center;gap:22px">
-            <a href="#home" style="display:flex;align-items:center;gap:12px;flex:none">
+            <a href="index.html" style="display:flex;align-items:center;gap:12px;flex:none">
               <img src="assets/adg-badge.png" alt="ADG"
                 style="width:42px;height:42px;border-radius:11px;display:block;transition:transform .5s cubic-bezier(.16,.84,.44,1)"
                 style-hover="transform:rotate(-8deg) scale(1.06)">
@@ -243,7 +217,7 @@
                       style="position:absolute;left:12px;right:12px;bottom:2px;height:1.5px;background:var(--adg-accent,#4fd0dc);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.16,.84,.44,1)"></span></a>
                 </sc-for>
               </nav>
-              <a href="#join" data-magnet="1"
+              <a href="join.html" data-magnet="1"
                 style="flex:none;position:relative;overflow:hidden;padding:11px 20px;border:1px solid var(--adg-accent,#4fd0dc);border-radius:999px;color:var(--adg-accent,#4fd0dc);font:500 12.5px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;transition:color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
                 style-hover="color:#0c1426">
                 <span data-fill="1"
@@ -268,7 +242,7 @@
           style="position:fixed;inset:0;z-index:95;background:rgba(8,13,25,.97);backdrop-filter:blur(10px);animation:adgFade .22s ease;display:flex;flex-direction:column;padding:22px clamp(18px,6vw,40px);overflow:auto">
           <div style="display:flex;align-items:center;justify-content:space-between">
             <span style="font:400 10px/1 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.18em">MENU — PICK A
-              PLACE TO LAND</span>
+              PAGE</span>
             <button onClick="{{ toggleNav }}" aria-label="Close"
               style="width:44px;height:44px;background:none;border:1px solid rgba(241,237,227,.16);border-radius:12px;color:#f1ede3;font-size:18px;cursor:pointer">✕</button>
           </div>
@@ -283,7 +257,7 @@
               </a>
             </sc-for>
           </nav>
-          <a href="#join" onClick="{{ closeNav }}"
+          <a href="join.html" onClick="{{ closeNav }}"
             style="margin-top:26px;text-align:center;padding:17px;border-radius:999px;background:var(--adg-accent,#4fd0dc);color:#0c1426;font:500 13px/1 'IBM Plex Mono',monospace;letter-spacing:.08em">JOIN
             ADG →</a>
         </div>
@@ -328,10 +302,10 @@
               </p>
               <div data-reveal="1"
                 style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin-top:34px;display:flex;flex-wrap:wrap;gap:13px">
-                <a href="#join" data-magnet="1"
+                <a href="join.html" data-magnet="1"
                   style="position:relative;padding:16px 30px;border-radius:999px;background:var(--adg-accent,#4fd0dc);color:#0c1426;font:500 13.5px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;transition:transform .3s cubic-bezier(.16,.84,.44,1),box-shadow .3s ease"
                   style-hover="box-shadow:0 20px 44px -22px var(--adg-accent,#4fd0dc)">JOIN THE COMMITTEE</a>
-                <a href="#events"
+                <a href="events.html"
                   style="position:relative;overflow:hidden;padding:16px 30px;border:1px solid rgba(241,237,227,.2);border-radius:999px;color:#f1ede3;font:500 13.5px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;transition:border-color .3s ease"
                   style-hover="border-color:#f1ede3">
                   <span data-fill="1"
@@ -390,548 +364,152 @@
           </div>
         </section>
 
-        <section id="about" data-screen-label="About" style="padding:clamp(78px,10vw,136px) clamp(18px,4vw,40px)">
+        <!-- Hub Directory Section: Explore Pages -->
+        <section style="padding:clamp(70px,9vw,110px) clamp(18px,4vw,40px)">
           <div style="max-width:1240px;margin:0 auto">
             <div data-reveal="1"
               style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap">
               <span
-                style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">01
-                / ABOUT ADG</span>
-              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">// the part
-                every other site fills with stock photos</span>
+                style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">EXPLORE
+                / THE COMMITTEE</span>
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">// navigate by
+                section</span>
               <span
                 style="flex:1;min-width:40px;height:1px;background:linear-gradient(90deg,rgba(241,237,227,.18),transparent)"></span>
             </div>
             <div
-              style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,5vw,68px);align-items:start">
+              style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom: clamp(34px,5vw,50px)">
               <h2 data-reveal="1"
                 style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:0;font:600 clamp(30px,3.8vw,48px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#f1ede3">
-                A committee is a habit,<br>not a calendar.</h2>
-              <div>
-                <p data-reveal="1"
-                  style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:0;font:400 17px/1.72 'IBM Plex Sans',sans-serif;color:#c3cbdd">
-                  We don't teach courses and we don't run the syllabus — that's the department's job, and they're better
-                  at it. ADG runs workshops, bootcamps, seminars, guest talks, competitions and one flagship hackathon
-                  where you build with what you're already being taught.
-                </p>
-                <p data-reveal="1"
-                  style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:20px 0 0;font:400 16.5px/1.72 'IBM Plex Sans',sans-serif;color:#9aa7c0">
-                  Deep Learning, NLP, GenAI &amp; LLMs, Cloud, MLOps, Edge AI, AI-IoT — all already on the AIML scheme.
-                  You arrive with syllabus knowledge and leave with a working project, a certificate, a competition
-                  entry and receipts. Every session is open to every student; you do not need to be a member to walk in.
-                </p>
-              </div>
+                Everything ADG, organized.
+              </h2>
+              <span data-reveal="1"
+                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);font:400 13px/1.5 'IBM Plex Mono',monospace;color:#9aa7c0">
+                SELECT A SECTION TO DIVE DEEPER
+              </span>
             </div>
 
-            <div
-              style="margin-top:clamp(46px,6vw,78px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
-              <sc-for list="{{ usps }}" as="u" hint-placeholder-count="3">
-                <article data-reveal="1" data-tilt="1"
-                  style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease,background .35s ease;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:28px 26px 30px"
-                  style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 26px 50px -34px rgba(0,0,0,.95);background:#131f39">
-                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
+
+              <a href="about.html" data-reveal="1" data-tilt="1"
+                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease,background .35s ease;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px"
+                style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 26px 50px -34px rgba(0,0,0,.95);background:#131f39">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
                     <span
-                      style="font:400 10.5px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.14em">{{
-                      u.tag }}</span>
-                    <span style="font:600 34px/1 'Space Grotesk',sans-serif;color:rgba(241,237,227,.1)">{{ u.num
-                      }}</span>
+                      style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.14em">01
+                      / ABOUT</span>
+                    <span style="font:600 24px/1 'Space Grotesk',sans-serif;color:rgba(241,237,227,.12)">01</span>
                   </div>
-                  <h3
-                    style="margin:0;font:600 21px/1.24 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f1ede3">
-                    {{ u.title }}</h3>
-                  <p style="margin:13px 0 0;font:400 15px/1.66 'IBM Plex Sans',sans-serif;color:#9aa7c0">{{ u.body }}
-                  </p>
-                  <span
-                    style="display:inline-block;margin-top:18px;padding:6px 11px;border-radius:8px;background:rgba(241,237,227,.05);font:400 11px/1.4 'IBM Plex Mono',monospace;color:#71809d">{{
-                    u.aside }}</span>
-                </article>
-              </sc-for>
-            </div>
-          </div>
-        </section>
-
-        <section data-screen-label="Stats" style="padding:0 clamp(18px,4vw,40px) clamp(70px,8vw,112px)">
-          <div data-reveal="1" data-counters="1"
-            style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);max-width:1240px;margin:0 auto;background:linear-gradient(135deg,#16223c,#111a30);border:1px solid rgba(241,237,227,.1);border-radius:24px;padding:clamp(30px,4vw,50px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px">
-            <span
-              style="grid-column:1/-1;font:400 10px/1 'IBM Plex Mono',monospace;color:#71809d;letter-spacing:.14em">YEAR
-              1 TARGETS — MEASURED AT CLOSE, NOT CLAIMED UP FRONT</span>
-            <div style="display:flex;flex-direction:column;gap:9px">
-              <span
-                style="font:600 clamp(36px,4.4vw,56px)/1 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.03em"><span
-                  data-count="3" data-suffix="">0</span></span>
-              <span style="font:400 10.5px/1.5 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.12em">WORKSHOPS,
-                INDUSTRY-LED</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:9px">
-              <span
-                style="font:600 clamp(36px,4.4vw,56px)/1 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.03em"><span
-                  data-count="1" data-suffix="">0</span></span>
-              <span style="font:400 10.5px/1.5 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.12em">FLAGSHIP
-                HACKATHON</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:9px">
-              <span
-                style="font:600 clamp(36px,4.4vw,56px)/1 'Space Grotesk',sans-serif;color:var(--adg-accent,#4fd0dc);letter-spacing:-.03em"><span
-                  data-count="2" data-suffix="">0</span></span>
-              <span
-                style="font:400 10.5px/1.5 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.12em">SEMINARS</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:9px">
-              <span
-                style="font:600 clamp(36px,4.4vw,56px)/1 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.03em"><span
-                  data-count="5" data-suffix="">0</span></span>
-              <span style="font:400 10.5px/1.5 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.12em">DOMAIN
-                TEAMS</span>
-            </div>
-          </div>
-        </section>
-
-
-
-        <section id="mission" data-screen-label="Mission" style="padding:clamp(78px,10vw,130px) clamp(18px,4vw,40px)">
-          <div style="max-width:1240px;margin:0 auto">
-            <div data-reveal="1"
-              style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap">
-              <span
-                style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">02
-                / VISION, MISSION &amp; OBJECTIVES</span>
-              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">// the serious
-                page, kept short</span>
-              <span
-                style="flex:1;min-width:40px;height:1px;background:linear-gradient(90deg,rgba(241,237,227,.18),transparent)"></span>
-            </div>
-            <blockquote data-reveal="1"
-              style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:0;padding-left:clamp(18px,3vw,34px);border-left:2px solid var(--adg-accent,#4fd0dc);max-width:34ch;font:500 clamp(22px,2.8vw,34px)/1.34 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f1ede3">
-              To nurture a transformative environment in Artificial Intelligence and Machine Learning education, shaping
-              innovative leaders through holistic development and integrity, to drive intelligent technology for a
-              sustainable, inclusive, and harmonious future.
-              <footer
-                style="margin-top:18px;font:400 11px/1 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.14em">—
-                OUR VISION</footer>
-            </blockquote>
-
-            <div
-              style="margin-top:clamp(46px,6vw,78px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,54px)">
-              <div>
-                <h3
-                  style="margin:0 0 20px;font:400 11px/1 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.16em">
-                  MISSION</h3>
-                <div style="display:flex;flex-direction:column">
-                  <sc-for list="{{ missions }}" as="m" hint-placeholder-count="5">
-                    <div data-reveal="1"
-                      style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),background .3s ease,padding-left .3s ease;display:flex;gap:16px;padding:17px 14px;border-bottom:1px solid rgba(241,237,227,.08);border-radius:10px"
-                      style-hover="background:rgba(241,237,227,.04);padding-left:20px">
-                      <span
-                        style="flex:none;width:30px;font:500 12px/1.5 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc)">{{
-                        m.id }}</span>
-                      <span style="font:400 15.5px/1.62 'IBM Plex Sans',sans-serif;color:#c3cbdd">{{ m.body }}</span>
-                    </div>
-                  </sc-for>
+                  <h3 style="margin:0;font:600 22px/1.2 'Space Grotesk',sans-serif;color:#f1ede3">A committee is a
+                    habit, not a calendar.</h3>
+                  <p style="margin:10px 0 0;font:400 14.5px/1.65 'IBM Plex Sans',sans-serif;color:#9aa7c0">Our core
+                    USPs, hands-on philosophy, and Year 1 targets measured at close.</p>
                 </div>
-              </div>
-              <div>
-                <h3
-                  style="margin:0 0 20px;font:400 11px/1 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.16em">
-                  OBJECTIVES · FIVE, DISTINCT</h3>
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:11px">
-                  <sc-for list="{{ objectives }}" as="o" hint-placeholder-count="4">
-                    <div data-reveal="1"
-                      style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .3s ease,background .3s ease;background:#111c33;border:1px solid rgba(241,237,227,.09);border-radius:14px;padding:18px 17px"
-                      style-hover="border-color:var(--adg-accent,#4fd0dc);background:#131f3a">
-                      <div style="display:flex;align-items:baseline;gap:9px">
-                        <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc)">{{ o.id
-                          }}</span>
-                        <span
-                          style="font:600 15px/1.3 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.01em">{{
-                          o.title }}</span>
-                      </div>
-                      <p style="margin:10px 0 0;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:#8e9ab4">{{ o.body
-                        }}</p>
-                    </div>
-                  </sc-for>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="events" data-screen-label="Events"
-          style="padding:clamp(78px,10vw,130px) clamp(18px,4vw,40px);background:#0e1830;border-top:1px solid rgba(241,237,227,.09);border-bottom:1px solid rgba(241,237,227,.09)">
-          <div style="max-width:1240px;margin:0 auto">
-            <div data-reveal="1"
-              style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap">
-              <span
-                style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">03
-                / EVENTS</span>
-              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">// scheduled
-                around exams, not on top of them</span>
-              <span
-                style="flex:1;min-width:40px;height:1px;background:linear-gradient(90deg,rgba(241,237,227,.18),transparent)"></span>
-            </div>
-            <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:22px">
-              <h2 data-reveal="1"
-                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:0;max-width:20ch;font:600 clamp(30px,3.8vw,48px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.03em">
-                Term 1 — schedule dropping soon</h2>
-              <div data-reveal="1"
-                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);display:flex;flex-wrap:wrap;gap:8px">
-                <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
-                  <button onClick="{{ setFilter }}" data-filter="{{ f.key }}"
-                    style="padding:11px 17px;border:1px solid rgba(241,237,227,.16);border-radius:999px;background:transparent;color:#9aa7c0;font:500 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;cursor:pointer;transition:background .28s ease,color .28s ease,border-color .28s ease,transform .28s cubic-bezier(.16,.84,.44,1)"
-                    style-hover="transform:translateY(-2px)">{{ f.label }}</button>
-                </sc-for>
-              </div>
-            </div>
-
-
-
-            <div
-              style="margin-top:clamp(26px,3vw,36px);display:grid;grid-template-columns:repeat(auto-fit,minmax(298px,1fr));gap:17px">
-              <sc-for list="{{ visibleEvents }}" as="e" hint-placeholder-count="6">
-                <article data-reveal="1" data-tilt="1" data-id="{{ e.id }}" onClick="{{ openEvent }}"
-                  style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease;cursor:pointer;position:relative;overflow:hidden;background:#121d35;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:24px 22px 22px;display:flex;flex-direction:column;gap:15px"
-                  style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 28px 54px -34px rgba(0,0,0,.95)">
-                  <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
-                    <span
-                      style="padding:6px 11px;border-radius:999px;background:rgba(79,208,220,.12);border:1px solid rgba(79,208,220,.28);color:var(--adg-accent,#4fd0dc);font:500 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">{{
-                      e.tag }}</span>
-                    <span style="font:400 10.5px/1 'IBM Plex Mono',monospace;color:#71809d;letter-spacing:.09em">{{
-                      e.status }}</span>
-                  </div>
-                  <div>
-                    <h3
-                      style="margin:0;font:600 20.5px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f1ede3">
-                      {{ e.title }}</h3>
-                    <p style="margin:10px 0 0;font:400 14.5px/1.62 'IBM Plex Sans',sans-serif;color:#9aa7c0">{{ e.blurb
-                      }}</p>
-                  </div>
-                  <div
-                    style="margin-top:auto;padding-top:15px;border-top:1px solid rgba(241,237,227,.09);display:flex;align-items:center;justify-content:space-between;gap:10px">
-                    <span style="font:400 11.5px/1 'IBM Plex Mono',monospace;color:#c3cbdd;letter-spacing:.05em">{{
-                      e.date }}</span>
-                    <span
-                      style="display:flex;align-items:center;gap:6px;font:500 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.09em">OPEN
-                      →</span>
-                  </div>
-                </article>
-              </sc-for>
-            </div>
-          </div>
-        </section>
-
-        <section id="team" data-screen-label="Team" style="position:relative;height:1000svh">
-          <div ref="{{ treeRef }}"
-            style="position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;padding:92px clamp(18px,4vw,40px) 12px;background:#0c1426">
-            <div
-              style="max-width:1240px;margin:0 auto;width:100%;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-              <span
-                style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">04
-                / THE TEAM</span>
-              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">// keep
-                scrolling — one level per screen</span>
-              <span
-                style="flex:1;min-width:40px;height:1px;background:linear-gradient(90deg,rgba(241,237,227,.18),transparent)"></span>
-              <span ref="{{ lvlLabelRef }}"
-                style="font:500 10.5px/1.4 'IBM Plex Mono',monospace;color:#f1ede3;letter-spacing:.12em">LEVEL 1 OF 10 ·
-                HOD &amp; COORDINATORS</span>
-            </div>
-            <div style="position:relative;flex:1;max-width:1240px;margin:0 auto;width:100%;min-height:0">
-              <div data-level="0"
-                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;opacity:1;transition:opacity .55s cubic-bezier(.16,.84,.44,1),transform .55s cubic-bezier(.16,.84,.44,1)">
-                <div style="flex:none;text-align:center;margin-bottom:10px">
-                  <span
-                    style="font:400 10px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">LEVEL
-                    01 · FACULTY</span>
-                  <h3
-                    style="margin:5px 0 0;font:600 clamp(18px,2.2vw,28px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:#f1ede3">
-                    HOD &amp; Coordinators</h3>
-                </div>
-                <div
-                  style="position:relative;flex:none;display:flex;align-items:center;gap:10px;width:244px;background:#111c33;border:1px solid rgba(79,208,220,.45);border-radius:13px;padding:8px;transition:border-color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
-                  style-hover="border-color:var(--adg-accent,#4fd0dc);transform:translateY(-3px)">
-
-                  <span
-                    style="flex:none;width:58px;aspect-ratio:3/4;border-radius:8px;background:repeating-linear-gradient(135deg,#1b2947 0 8px,#22314f 8px 16px);display:flex;align-items:center;justify-content:center;font:400 7px/1.3 'IBM Plex Mono',monospace;color:#8e9ab4">PHOTO</span>
-                  <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
-                    <span
-                      style="font:400 8px/1.3 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.1em">{{
-                      facultyTop.role }}</span>
-                    <span style="font:600 15px/1.22 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.01em">{{
-                      facultyTop.name }}</span>
-                  </span>
-                </div>
-                <span style="flex:none;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                <div
-                  style="position:relative;flex:none;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:11px;padding-top:10px">
-                  <span
-                    style="position:absolute;top:0;left:113px;right:113px;height:1px;background:rgba(79,208,220,.38)"></span>
-                  <sc-for list="{{ facultyChildren }}" as="p" hint-placeholder-count="2">
-                    <div
-                      style="position:relative;flex:none;display:flex;align-items:center;gap:10px;width:226px;background:#111c33;border:1px solid rgba(241,237,227,.14);border-radius:13px;padding:8px;transition:border-color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
-                      style-hover="border-color:var(--adg-accent,#4fd0dc);transform:translateY(-3px)">
-                      <span
-                        style="position:absolute;top:-18px;left:50%;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                      <span
-                        style="flex:none;width:50px;aspect-ratio:3/4;border-radius:8px;background:repeating-linear-gradient(135deg,#1b2947 0 8px,#22314f 8px 16px);display:flex;align-items:center;justify-content:center;font:400 7px/1.3 'IBM Plex Mono',monospace;color:#8e9ab4">PHOTO</span>
-                      <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
-                        <span
-                          style="font:400 7.5px/1.3 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.1em">{{
-                          p.role }}</span>
-                        <span
-                          style="font:600 13.5px/1.22 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.01em">{{
-                          p.name }}</span>
-                      </span>
-                    </div>
-                  </sc-for>
-                </div>
-              </div>
-              <div data-level="1"
-                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;opacity:0;transform:translateY(60px);pointer-events:none;transition:opacity .55s cubic-bezier(.16,.84,.44,1),transform .55s cubic-bezier(.16,.84,.44,1)">
-                <div style="flex:none;text-align:center;margin-bottom:10px">
-                  <span
-                    style="font:400 10px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">LEVEL
-                    02 · OFFICE BEARERS</span>
-                  <h3
-                    style="margin:5px 0 0;font:600 clamp(18px,2.2vw,28px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:#f1ede3">
-                    Core</h3>
-                </div>
-                <div
-                  style="position:relative;flex:none;display:flex;align-items:center;gap:10px;width:244px;background:#111c33;border:1px solid rgba(79,208,220,.45);border-radius:13px;padding:8px;transition:border-color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
-                  style-hover="border-color:var(--adg-accent,#4fd0dc);transform:translateY(-3px)">
-
-                  <span
-                    style="flex:none;width:58px;aspect-ratio:3/4;border-radius:8px;background:repeating-linear-gradient(135deg,#1b2947 0 8px,#22314f 8px 16px);display:flex;align-items:center;justify-content:center;font:400 7px/1.3 'IBM Plex Mono',monospace;color:#8e9ab4">PHOTO</span>
-                  <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
-                    <span
-                      style="font:400 8px/1.3 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.1em">{{
-                      coreTop.role }}</span>
-                    <span style="font:600 15px/1.22 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.01em">{{
-                      coreTop.name }}</span>
-                  </span>
-                </div>
-                <span style="flex:none;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                <div
-                  style="position:relative;flex:none;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:11px;padding-top:10px">
-                  <span
-                    style="position:absolute;top:0;left:104px;right:104px;height:1px;background:rgba(79,208,220,.38)"></span>
-                  <sc-for list="{{ coreChildren }}" as="p" hint-placeholder-count="3">
-                    <div
-                      style="position:relative;flex:none;display:flex;align-items:center;gap:10px;width:208px;background:#111c33;border:1px solid rgba(241,237,227,.14);border-radius:13px;padding:8px;transition:border-color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
-                      style-hover="border-color:var(--adg-accent,#4fd0dc);transform:translateY(-3px)">
-                      <span
-                        style="position:absolute;top:-18px;left:50%;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                      <span
-                        style="flex:none;width:50px;aspect-ratio:3/4;border-radius:8px;background:repeating-linear-gradient(135deg,#1b2947 0 8px,#22314f 8px 16px);display:flex;align-items:center;justify-content:center;font:400 7px/1.3 'IBM Plex Mono',monospace;color:#8e9ab4">PHOTO</span>
-                      <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
-                        <span
-                          style="font:400 7.5px/1.3 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.1em">{{
-                          p.role }}</span>
-                        <span
-                          style="font:600 13px/1.22 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.01em">{{
-                          p.name }}</span>
-                      </span>
-                    </div>
-                  </sc-for>
-                </div>
-              </div>
-              <sc-for list="{{ domainLevels }}" as="d" hint-placeholder-count="8">
-                <div data-level="{{ d.idx }}"
-                  style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;opacity:0;transform:translateY(60px);pointer-events:none;transition:opacity .55s cubic-bezier(.16,.84,.44,1),transform .55s cubic-bezier(.16,.84,.44,1)">
-                  <div style="flex:none;text-align:center;margin-bottom:10px">
-                    <span
-                      style="font:400 10px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">{{
-                      d.tag }}</span>
-                    <h3
-                      style="margin:5px 0 0;font:600 clamp(18px,2.2vw,28px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:#f1ede3">
-                      {{ d.name }}</h3>
-                  </div>
-                  <div
-                    style="position:relative;flex:none;display:flex;align-items:center;gap:10px;width:244px;background:#111c33;border:1px solid rgba(79,208,220,.45);border-radius:13px;padding:8px;transition:border-color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
-                    style-hover="border-color:var(--adg-accent,#4fd0dc);transform:translateY(-3px)">
-
-                    <span
-                      style="flex:none;width:58px;aspect-ratio:3/4;border-radius:8px;background:repeating-linear-gradient(135deg,#1b2947 0 8px,#22314f 8px 16px);display:flex;align-items:center;justify-content:center;font:400 7px/1.3 'IBM Plex Mono',monospace;color:#8e9ab4">PHOTO</span>
-                    <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
-                      <span
-                        style="font:400 8px/1.3 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.1em">HEAD</span>
-                      <span style="font:600 15px/1.22 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.01em">{{
-                        d.head }}</span>
-                    </span>
-                  </div>
-                  <sc-if value="{{ d.hasJoint }}" hint-placeholder-val="{{ true }}">
-                    <span style="flex:none;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                    <div
-                      style="position:relative;flex:none;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:11px;padding-top:10px">
-                      <span
-                        style="position:absolute;top:0;left:100px;right:100px;height:1px;background:rgba(79,208,220,.38)"></span>
-                      <sc-for list="{{ d.joint }}" as="p" hint-placeholder-count="2">
-                        <div
-                          style="position:relative;flex:none;display:flex;align-items:center;gap:10px;width:200px;background:#111c33;border:1px solid rgba(241,237,227,.14);border-radius:13px;padding:8px;transition:border-color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
-                          style-hover="border-color:var(--adg-accent,#4fd0dc);transform:translateY(-3px)">
-                          <span
-                            style="position:absolute;top:-18px;left:50%;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                          <span
-                            style="flex:none;width:44px;aspect-ratio:3/4;border-radius:8px;background:repeating-linear-gradient(135deg,#1b2947 0 8px,#22314f 8px 16px);display:flex;align-items:center;justify-content:center;font:400 7px/1.3 'IBM Plex Mono',monospace;color:#8e9ab4">PHOTO</span>
-                          <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
-                            <span
-                              style="font:400 7px/1.3 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.1em">JOINT
-                              HEAD</span>
-                            <span
-                              style="font:600 12.5px/1.22 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.01em">{{
-                              p.name }}</span>
-                          </span>
-                        </div>
-                      </sc-for>
-                    </div>
-                  </sc-if>
-                  <span style="flex:none;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                  <div
-                    style="position:relative;flex:none;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:9px;padding-top:10px">
-                    <span
-                      style="position:absolute;top:0;left:41px;right:41px;height:1px;background:rgba(79,208,220,.38)"></span>
-                    <sc-for list="{{ d.execs }}" as="p" hint-placeholder-count="4">
-                      <div
-                        style="position:relative;flex:none;display:flex;flex-direction:column;align-items:center;gap:6px;width:82px;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:11px;padding:7px 6px 8px;transition:border-color .3s ease,transform .3s cubic-bezier(.16,.84,.44,1)"
-                        style-hover="border-color:var(--adg-accent,#4fd0dc);transform:translateY(-3px)">
-                        <span
-                          style="position:absolute;top:-16px;left:50%;width:1px;height:10px;background:rgba(79,208,220,.38)"></span>
-                        <span
-                          style="width:100%;aspect-ratio:3/4;border-radius:7px;background:repeating-linear-gradient(135deg,#16223c 0 7px,#1b2947 7px 14px);display:flex;align-items:center;justify-content:center;font:400 6.5px/1.3 'IBM Plex Mono',monospace;color:#6d7b98">PHOTO</span>
-                        <span style="display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center">
-                          <span
-                            style="font:400 6.5px/1.3 'IBM Plex Mono',monospace;color:#8e9ab4;letter-spacing:.1em">EXEC</span>
-                          <span style="font:600 9px/1.2 'Space Grotesk',sans-serif;color:#f1ede3">{{ p.name }}</span>
-                        </span>
-                      </div>
-                    </sc-for>
-                  </div>
-                  <span
-                    style="flex:none;margin-top:10px;font:400 9.5px/1.5 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">{{
-                    d.note }}</span>
-                </div>
-              </sc-for>
-            </div>
-            <div style="display:flex;justify-content:center;gap:9px;padding-top:12px">
-              <sc-for list="{{ treeLevels }}" as="lv" hint-placeholder-count="10">
-                <button onClick="{{ goLevel }}" data-lvlbtn="{{ $index }}" title="{{ lv.label }}"
-                  style="width:22px;height:6px;border-radius:99px;border:0;padding:0;background:rgba(241,237,227,.15);cursor:pointer;transition:background .3s ease"></button>
-              </sc-for>
-            </div>
-          </div>
-        </section>
-
-        <section id="gallery" data-screen-label="Gallery"
-          style="padding:clamp(78px,10vw,130px) clamp(18px,4vw,40px);background:#0e1830;border-top:1px solid rgba(241,237,227,.09);border-bottom:1px solid rgba(241,237,227,.09)">
-          <div style="max-width:1240px;margin:0 auto">
-            <div data-reveal="1"
-              style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap">
-              <span
-                style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">05
-                / GALLERY</span>
-              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">// drop real
-                photos here, we left the frames</span>
-              <span
-                style="flex:1;min-width:40px;height:1px;background:linear-gradient(90deg,rgba(241,237,227,.18),transparent)"></span>
-            </div>
-            <h2 data-reveal="1"
-              style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:0 0 clamp(30px,4vw,44px);max-width:22ch;font:600 clamp(30px,3.8vw,48px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.03em">
-              Proof of work, not posters</h2>
-            <div style="display:flex;justify-content:flex-start">
-              <sc-for list="{{ albums }}" as="g" hint-placeholder-count="1">
-                <figure onClick="{{ openShot }}" data-reveal="1"
-                  style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease;margin:0;position:relative;width:min(560px,100%);aspect-ratio:16/10;overflow:hidden;border-radius:20px;border:1px solid rgba(241,237,227,.12);cursor:zoom-in;background:repeating-linear-gradient(135deg,#16223c 0 10px,#1b2947 10px 20px)"
-                  style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 30px 60px -38px rgba(0,0,0,.95)">
-                  <div
-                    style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:transform .65s cubic-bezier(.16,.84,.44,1);background:repeating-linear-gradient(135deg,#16223c 0 10px,#1b2947 10px 20px)"
-                    style-hover="transform:scale(1.05)">
-                    <span
-                      style="font:400 10px/1.7 'IBM Plex Mono',monospace;color:#6d7b98;letter-spacing:.1em;text-align:center;padding:0 24px;white-space:pre-line">{{
-                      g.cover }}</span>
-                  </div>
-                  <figcaption
-                    style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,14,28,.94),transparent 58%);display:flex;flex-direction:column;justify-content:flex-end;gap:7px;padding:22px">
-                    <span style="font:600 26px/1.15 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.02em">{{
-                      g.title }}</span>
-                    <span
-                      style="display:flex;align-items:center;gap:10px;font:400 10.5px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.11em">{{
-                      g.count }} &nbsp;&middot;&nbsp; OPEN ALBUM &rarr;</span>
-                  </figcaption>
-                </figure>
-              </sc-for>
-            </div>
-          </div>
-        </section>
-
-
-
-        <section id="join" data-screen-label="Join"
-          style="padding:clamp(78px,10vw,130px) clamp(18px,4vw,40px);background:#0e1830;border-top:1px solid rgba(241,237,227,.09)">
-          <div
-            style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(308px,1fr));gap:clamp(30px,5vw,64px);align-items:start">
-            <div>
-              <div data-reveal="1"
-                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap">
                 <span
-                  style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.16em">06
-                  / JOIN ADG</span>
-                <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#5d6b88;letter-spacing:.1em">// yes,
-                  first-years too</span>
-              </div>
-              <h2 data-reveal="1"
-                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:0;font:600 clamp(28px,3.6vw,46px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.03em">
-                member → contributor → core team</h2>
-              <p data-reveal="1"
-                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);margin:20px 0 0;max-width:48ch;font:400 16px/1.7 'IBM Plex Sans',sans-serif;color:#9aa7c0">
-                Any year, any starting point. Sessions need no membership — registering puts you on the list, and the
-                people who show up and help run things become core members.</p>
-              <div style="margin-top:30px;display:flex;flex-direction:column">
-                <sc-for list="{{ pipeline }}" as="s" hint-placeholder-count="3">
-                  <div data-reveal="1"
-                    style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);display:flex;gap:15px;padding:16px 0;border-bottom:1px solid rgba(241,237,227,.08)">
-                    <span
-                      style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--adg-accent,#4fd0dc);color:var(--adg-accent,#4fd0dc);display:flex;align-items:center;justify-content:center;font:500 11px/1 'IBM Plex Mono',monospace">{{
-                      s.n }}</span>
-                    <div>
-                      <h4 style="margin:0;font:600 15.5px/1.3 'Space Grotesk',sans-serif;color:#f1ede3">{{ s.title }}
-                      </h4>
-                      <p style="margin:6px 0 0;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:#8e9ab4">{{ s.body
-                        }}</p>
-                    </div>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
+                  style="font:500 12px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.08em">VIEW
+                  ABOUT PAGE →</span>
+              </a>
 
-            <div data-reveal="1"
-              style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1);background:#121d35;border:1px solid rgba(241,237,227,.1);border-radius:22px;padding:clamp(24px,3vw,36px)">
-              <div style="display:flex;flex-direction:column;gap:17px">
-                <span style="font:400 10px/1 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.14em">REGISTRATION
-                  · TERM 1</span>
-                <h3 style="margin:0;font:600 22px/1.22 'Space Grotesk',sans-serif;color:#f1ede3;letter-spacing:-.02em">
-                  One Google Form. Two minutes. No fee.</h3>
-                <p style="margin:0;font:400 15px/1.68 'IBM Plex Sans',sans-serif;color:#9aa7c0">Registration is handled
-                  through a single Google Form so the member database stays in one place. Sessions themselves stay open
-                  to every student — registering just means we can tell you when they are.</p>
-                <a href="https://forms.gle/23NuJf2oXcS7HsocA" target="_blank" rel="noopener" data-magnet="1"
-                  style="align-self:flex-start;padding:16px 27px;border-radius:999px;background:var(--adg-accent,#4fd0dc);color:#0c1426;font:500 13px/1 'IBM Plex Mono',monospace;letter-spacing:.07em;transition:transform .3s cubic-bezier(.16,.84,.44,1),box-shadow .3s ease"
-                  style-hover="box-shadow:0 16px 36px -20px var(--adg-accent,#4fd0dc)">OPEN THE REGISTRATION FORM →</a>
-                <div style="padding:18px;background:#0e1830;border:1px solid rgba(241,237,227,.1);border-radius:14px">
-                  <span style="font:400 10px/1 'IBM Plex Mono',monospace;color:#71809d;letter-spacing:.13em">WHAT THE
-                    FORM ASKS</span>
-                  <div style="margin-top:13px;display:flex;flex-direction:column;gap:9px">
-                    <sc-for list="{{ formAsks }}" as="f" hint-placeholder-count="4">
-                      <div style="display:flex;gap:11px;align-items:baseline">
-                        <span
-                          style="flex:none;width:5px;height:5px;border-radius:50%;background:var(--adg-accent,#4fd0dc)"></span>
-                        <span style="font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:#c3cbdd">{{ f.label }}</span>
-                      </div>
-                    </sc-for>
+              <a href="mission.html" data-reveal="1" data-tilt="1"
+                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease,background .35s ease;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px"
+                style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 26px 50px -34px rgba(0,0,0,.95);background:#131f39">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                    <span
+                      style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.14em">02
+                      / MISSION</span>
+                    <span style="font:600 24px/1 'Space Grotesk',sans-serif;color:rgba(241,237,227,.12)">02</span>
                   </div>
+                  <h3 style="margin:0;font:600 22px/1.2 'Space Grotesk',sans-serif;color:#f1ede3">Vision, Mission &amp;
+                    Objectives</h3>
+                  <p style="margin:10px 0 0;font:400 14.5px/1.65 'IBM Plex Sans',sans-serif;color:#9aa7c0">Nurturing
+                    transformative intelligence in AI/ML through project competency and ethics.</p>
                 </div>
-                <p style="margin:0;font:400 11px/1.55 'IBM Plex Mono',monospace;color:#71809d;letter-spacing:.04em">
-                  OPENS IN A NEW TAB · TAKES ABOUT TWO MINUTES</p>
-              </div>
+                <span
+                  style="font:500 12px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.08em">VIEW
+                  MISSION &amp; VISION →</span>
+              </a>
+
+              <a href="events.html" data-reveal="1" data-tilt="1"
+                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease,background .35s ease;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px"
+                style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 26px 50px -34px rgba(0,0,0,.95);background:#131f39">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                    <span
+                      style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.14em">03
+                      / EVENTS</span>
+                    <span style="font:600 24px/1 'Space Grotesk',sans-serif;color:rgba(241,237,227,.12)">03</span>
+                  </div>
+                  <h3 style="margin:0;font:600 22px/1.2 'Space Grotesk',sans-serif;color:#f1ede3">Term 1 — Workshops
+                    &amp; Hackathons</h3>
+                  <p style="margin:10px 0 0;font:400 14.5px/1.65 'IBM Plex Sans',sans-serif;color:#9aa7c0">
+                    Specialist-led sessions, the flagship hackathon, and published seminar notes.</p>
+                </div>
+                <span
+                  style="font:500 12px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.08em">VIEW
+                  ALL EVENTS →</span>
+              </a>
+
+              <a href="team.html" data-reveal="1" data-tilt="1"
+                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease,background .35s ease;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px"
+                style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 26px 50px -34px rgba(0,0,0,.95);background:#131f39">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                    <span
+                      style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.14em">04
+                      / THE TEAM</span>
+                    <span style="font:600 24px/1 'Space Grotesk',sans-serif;color:rgba(241,237,227,.12)">04</span>
+                  </div>
+                  <h3 style="margin:0;font:600 22px/1.2 'Space Grotesk',sans-serif;color:#f1ede3">10 Levels: Faculty,
+                    Core &amp; Domains</h3>
+                  <p style="margin:10px 0 0;font:400 14.5px/1.65 'IBM Plex Sans',sans-serif;color:#9aa7c0">Meet HOD
+                    &amp; coordinators, core officers and the 8 dedicated domain teams.</p>
+                </div>
+                <span
+                  style="font:500 12px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.08em">VIEW
+                  THE TEAM TREE →</span>
+              </a>
+
+              <a href="gallery.html" data-reveal="1" data-tilt="1"
+                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease,background .35s ease;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px"
+                style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 26px 50px -34px rgba(0,0,0,.95);background:#131f39">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                    <span
+                      style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.14em">05
+                      / GALLERY</span>
+                    <span style="font:600 24px/1 'Space Grotesk',sans-serif;color:rgba(241,237,227,.12)">05</span>
+                  </div>
+                  <h3 style="margin:0;font:600 22px/1.2 'Space Grotesk',sans-serif;color:#f1ede3">Proof of work, not
+                    posters</h3>
+                  <p style="margin:10px 0 0;font:400 14.5px/1.65 'IBM Plex Sans',sans-serif;color:#9aa7c0">Explore the
+                    committee kickoffs, lab shots, hands-on key moments, and demos.</p>
+                </div>
+                <span
+                  style="font:500 12px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.08em">OPEN
+                  PHOTO GALLERY →</span>
+              </a>
+
+              <a href="join.html" data-reveal="1" data-tilt="1"
+                style="opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1),border-color .35s ease,box-shadow .35s ease,background .35s ease;background:#111c33;border:1px solid rgba(241,237,227,.1);border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px"
+                style-hover="border-color:var(--adg-accent,#4fd0dc);box-shadow:0 26px 50px -34px rgba(0,0,0,.95);background:#131f39">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                    <span
+                      style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.14em">06
+                      / JOIN ADG</span>
+                    <span style="font:600 24px/1 'Space Grotesk',sans-serif;color:rgba(241,237,227,.12)">06</span>
+                  </div>
+                  <h3 style="margin:0;font:600 22px/1.2 'Space Grotesk',sans-serif;color:#f1ede3">Member → Contributor →
+                    Core</h3>
+                  <p style="margin:10px 0 0;font:400 14.5px/1.65 'IBM Plex Sans',sans-serif;color:#9aa7c0">One 2-minute
+                    form. Open to any branch and year. Zero prerequisites or fee.</p>
+                </div>
+                <span
+                  style="font:500 12px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.08em">REGISTER
+                  NOW →</span>
+              </a>
 
             </div>
           </div>
@@ -981,7 +559,7 @@
                   style="margin:0 0 17px;font:400 10.5px/1 'IBM Plex Mono',monospace;color:#71809d;letter-spacing:.14em">
                   PROGRAMME</h4>
                 <div style="display:flex;flex-direction:column;gap:10px">
-                  <sc-for list="{{ programmeLinks }}" as="l" hint-placeholder-count="6">
+                  <sc-for list="{{ programmeLinks }}" as="l" hint-placeholder-count="5">
                     <a href="{{ l.href }}"
                       style="font:400 14px/1.4 'IBM Plex Sans',sans-serif;color:#c3cbdd;transition:color .26s ease,padding-left .26s ease"
                       style-hover="color:var(--adg-accent,#4fd0dc);padding-left:5px">{{ l.label }}</a>
@@ -995,7 +573,7 @@
                 <div style="display:flex;flex-direction:column;gap:13px">
                   <span style="font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:#c3cbdd">Department of AIML<br>St.
                     Francis Institute of Technology<br>Mt. Poinsur, S.V.P. Road, Borivli (W)<br>Mumbai 400103</span>
-                  <a href="#contact"
+                  <a href="mailto:adg@sfit.ac.in"
                     style="font:400 13.5px/1.4 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc)">adg@sfit.ac.in</a>
                   <span style="font:400 11.5px/1.5 'IBM Plex Mono',monospace;color:#71809d;letter-spacing:.05em">FACULTY
                     COORDINATOR · MS. PRIYANKA PATIL</span>
@@ -1025,96 +603,14 @@
             }}</span>
         </div>
       </sc-if>
-
-      <sc-if value="{{ eventOpen }}" hint-placeholder-val="{{ false }}">
-        <div onClick="{{ closeEvent }}"
-          style="position:fixed;inset:0;z-index:100;background:rgba(6,10,20,.84);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:clamp(14px,4vw,44px);animation:adgFade .24s ease">
-          <div onClick="{{ stop }}"
-            style="position:relative;width:min(680px,100%);max-height:86vh;overflow:auto;background:#121d35;border:1px solid rgba(241,237,227,.14);border-radius:24px;padding:clamp(24px,4vw,42px);animation:adgIn .42s cubic-bezier(.16,.84,.44,1)">
-            <button onClick="{{ closeEvent }}" aria-label="Close"
-              style="position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:12px;border:1px solid rgba(241,237,227,.16);background:none;color:#f1ede3;font-size:16px;cursor:pointer;transition:background .28s ease"
-              style-hover="background:rgba(241,237,227,.09)">✕</button>
-            <span
-              style="display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(79,208,220,.12);border:1px solid rgba(79,208,220,.28);color:var(--adg-accent,#4fd0dc);font:500 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">{{
-              activeEvent.tag }}</span>
-            <h3
-              style="margin:19px 0 0;max-width:26ch;font:600 clamp(25px,3.4vw,35px)/1.12 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#f1ede3">
-              {{ activeEvent.title }}</h3>
-            <p style="margin:15px 0 0;font:400 16px/1.7 'IBM Plex Sans',sans-serif;color:#9aa7c0">{{ activeEvent.detail
-              }}</p>
-            <div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(136px,1fr));gap:13px">
-              <sc-for list="{{ activeEventMeta }}" as="m" hint-placeholder-count="4">
-                <div style="background:#0e1830;border:1px solid rgba(241,237,227,.1);border-radius:14px;padding:15px">
-                  <span
-                    style="display:block;font:400 10px/1 'IBM Plex Mono',monospace;color:#71809d;letter-spacing:.12em">{{
-                    m.k }}</span>
-                  <span
-                    style="display:block;margin-top:8px;font:500 14.5px/1.35 'IBM Plex Sans',sans-serif;color:#f1ede3">{{
-                    m.v }}</span>
-                </div>
-              </sc-for>
-            </div>
-            <h4
-              style="margin:26px 0 11px;font:400 10.5px/1 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.14em">
-              YOU LEAVE WITH</h4>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <sc-for list="{{ activeEventTakeaways }}" as="t" hint-placeholder-count="3">
-                <div style="display:flex;gap:11px;align-items:baseline">
-                  <span
-                    style="flex:none;width:5px;height:5px;border-radius:50%;background:var(--adg-accent,#4fd0dc)"></span>
-                  <span style="font:400 14.5px/1.6 'IBM Plex Sans',sans-serif;color:#c3cbdd">{{ t.label }}</span>
-                </div>
-              </sc-for>
-            </div>
-            <a href="#join" onClick="{{ closeEvent }}"
-              style="margin-top:28px;display:inline-block;padding:15px 26px;border-radius:999px;background:var(--adg-accent,#4fd0dc);color:#0c1426;font:500 12.5px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;transition:transform .3s cubic-bezier(.16,.84,.44,1)"
-              style-hover="transform:translateY(-2px)">COUNT ME IN</a>
-          </div>
-        </div>
-      </sc-if>
-
-      <sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
-        <div onClick="{{ closeLightbox }}"
-          style="position:fixed;inset:0;z-index:105;background:rgba(5,9,18,.94);backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:clamp(14px,4vw,44px);animation:adgFade .22s ease">
-          <div style="display:flex;align-items:center;justify-content:space-between;width:min(940px,100%);gap:16px">
-            <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#9aa7c0;letter-spacing:.12em">{{
-              lightboxCounter }}</span>
-            <button onClick="{{ closeLightbox }}" aria-label="Close"
-              style="width:42px;height:42px;border-radius:12px;border:1px solid rgba(241,237,227,.18);background:none;color:#f1ede3;font-size:16px;cursor:pointer;transition:background .28s ease"
-              style-hover="background:rgba(241,237,227,.1)">✕</button>
-          </div>
-          <div onClick="{{ stop }}"
-            style="width:min(940px,100%);aspect-ratio:16/9;border-radius:20px;border:1px solid rgba(241,237,227,.14);background:repeating-linear-gradient(135deg,#16223c 0 12px,#1b2947 12px 24px);display:flex;align-items:center;justify-content:center;animation:adgIn .36s cubic-bezier(.16,.84,.44,1)">
-            <span
-              style="font:400 11.5px/1.7 'IBM Plex Mono',monospace;color:#8e9ab4;letter-spacing:.1em;text-align:center;padding:0 24px">{{
-              activeShot.label }}</span>
-          </div>
-          <div onClick="{{ stop }}"
-            style="width:min(940px,100%);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px">
-            <div style="display:flex;flex-direction:column;gap:5px">
-              <span style="font:600 18px/1.25 'Space Grotesk',sans-serif;color:#f1ede3">{{ activeShot.title }}</span>
-              <span
-                style="font:400 11px/1 'IBM Plex Mono',monospace;color:var(--adg-accent,#4fd0dc);letter-spacing:.1em">{{
-                activeShot.caption }}</span>
-            </div>
-            <div style="display:flex;gap:10px">
-              <button onClick="{{ prevShot }}" aria-label="Previous"
-                style="width:46px;height:46px;border-radius:12px;border:1px solid rgba(241,237,227,.18);background:none;color:#f1ede3;font-size:15px;cursor:pointer;transition:background .28s ease,border-color .28s ease,color .28s ease"
-                style-hover="background:var(--adg-accent,#4fd0dc);border-color:var(--adg-accent,#4fd0dc);color:#0c1426">←</button>
-              <button onClick="{{ nextShot }}" aria-label="Next"
-                style="width:46px;height:46px;border-radius:12px;border:1px solid rgba(241,237,227,.18);background:none;color:#f1ede3;font-size:15px;cursor:pointer;transition:background .28s ease,border-color .28s ease,color .28s ease"
-                style-hover="background:var(--adg-accent,#4fd0dc);border-color:var(--adg-accent,#4fd0dc);color:#0c1426">→</button>
-            </div>
-          </div>
-        </div>
-      </sc-if>
     </div>
 
   </x-dc>
   <script type="text/x-dc" data-dc-script
     data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4fd0dc&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#4fd0dc&quot;,&quot;#8ee06a&quot;,&quot;#b493ff&quot;,&quot;#ff9a5c&quot;],&quot;section&quot;:&quot;Look&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;subtle&quot;,&quot;balanced&quot;,&quot;showy&quot;],&quot;default&quot;:&quot;balanced&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
 class Component extends DCLogic {
-  state = { isMobile: false, navOpen: false, filter: 'All', openEvent: null, lightboxOpen: false, shotIndex: 0, submitted: false, toast: '' };
+  currentPage = 'home';
+  state = { isMobile: false, navOpen: false, toast: '' };
 
   MOTION = {
     subtle:   { stagger: 30,  dur: 400, anim: false, tilt: false },
@@ -1133,144 +629,30 @@ class Component extends DCLogic {
   quips = ['ship it \u2713', 'model converged. probably.', 'no GPUs were harmed', 'commit message: "final final v2"', 'that was the easter egg'];
 
   navLinks = [
-    { id: 'about', href: '#about', label: 'About', num: '01' },
-    { id: 'mission', href: '#mission', label: 'Mission', num: '02' },
-    { id: 'events', href: '#events', label: 'Events', num: '03' },
-    { id: 'team', href: '#team', label: 'Team', num: '04' },
-    { id: 'gallery', href: '#gallery', label: 'Gallery', num: '05' },
-    { id: 'join', href: '#join', label: 'Join', num: '06' }
+    { id: 'home', href: 'index.html', label: 'Home', num: '00' },
+    { id: 'about', href: 'about.html', label: 'About', num: '01' },
+    { id: 'mission', href: 'mission.html', label: 'Mission', num: '02' },
+    { id: 'events', href: 'events.html', label: 'Events', num: '03' },
+    { id: 'team', href: 'team.html', label: 'Team', num: '04' },
+    { id: 'gallery', href: 'gallery.html', label: 'Gallery', num: '05' },
+    { id: 'join', href: 'join.html', label: 'Join', num: '06' }
   ];
 
   marqueeDomains = ['DEEP LEARNING', 'NLP', 'GENAI & LLM', 'CLOUD', 'MLOPS', 'EDGE AI', 'AI-IOT', 'COMPUTER VISION', 'KAGGLE NIGHTS'];
 
-  usps = [
-    { num: '01', tag: 'USP ONE', title: 'Taught by people who ship', body: 'Every workshop this term is conducted hands-on by an industry specialist \u2014 laptops open, building live, not watching slides.', aside: 'three workshops, one series' },
-    { num: '02', tag: 'USP TWO', title: 'One flagship, done properly', body: 'A single hackathon per term with a live brief and a working demo as the bar \u2014 not five scattered events with no follow-through.', aside: 'demo or it did not happen' },
-    { num: '03', tag: 'USP THREE', title: 'We build, not just host', body: 'The committee itself ships: this website, a campus AI tool over college FAQs and past papers, an open-source repo members contribute to.', aside: 'yes, this page counts as one' }
-  ];
-
-  missions = [
-    { id: '1', body: 'To equip learners with a strong technical foundation in Intelligent Systems, empowering them to become innovative professionals who can seamlessly contribute to and lead in global industry environments.' },
-    { id: '2', body: 'To advance higher education and drive interdisciplinary research and innovation in AIML, addressing real-world challenges and creating solutions for the benefit of society.' },
-    { id: '3', body: 'To instil a commitment to ethical practices and entrepreneurial thinking, while promoting lifelong learning to contribute responsibly to the evolving landscape of AI.' }
-  ];
-
-  objectives = [
-    { id: 'O1', title: 'To build hands-on AI/ML competency among department members through project-based learning', body: 'Every workshop or session designed so members walk away with something tangible, not just notes.' },
-    { id: 'O2', title: 'To bridge the gap between classroom theory and industry practice', body: 'Exposing members to real-world tools, workflows, and the way AI/ML is actually built and deployed outside academics.' },
-    { id: 'O3', title: 'To create real pathways from learning to opportunity', body: 'Using flagship events like hackathons to connect members with internships, mentorship, and industry recognition.' },
-    { id: 'O4', title: 'To inspire, equip and empower students to explore, build, and lead in the evolving world of AI/ML', body: 'Fostering a community where curiosity turns into capability, year after year.' }
-  ];
-
-  operating = [
-    'Scheduled around the academic calendar \u2014 nothing inside mid-sems, practicals, festival breaks or end-sems.',
-    'Every event closes with certificates, a published recording or notes, and a written report within a week.',
-    'A syllabus document reviewed and signed off by faculty before the term begins.'
-  ];
-
-  events = [
-    { id: 'w1', tag: 'WORKSHOP', kind: 'WORKSHOP', status: 'TOPIC \u00b7 TBA', title: 'Workshop 01', date: 'DATE NA \u00b7 TIME NA \u00b7 VENUE NA', blurb: 'Hands-on, laptops open, taken by an industry specialist. Topic being finalised \u2014 the format is not.', detail: 'First of three workshops this term, conducted end-to-end by an industry specialist. The topic is being locked in; the format is fixed \u2014 you build along live and you leave with it running.', meta: [{ k: 'CONDUCTED BY', v: 'Industry specialist' }, { k: 'DATE', v: 'NA' }, { k: 'TIME', v: 'NA' }, { k: 'VENUE', v: 'NA' }], takeaways: ['A working build from the session', 'A certificate of participation'] },
-    { id: 'w2', tag: 'WORKSHOP', kind: 'WORKSHOP', status: 'TOPIC \u00b7 TBA', title: 'Workshop 02', date: 'DATE NA \u00b7 TIME NA \u00b7 VENUE NA', blurb: 'Second in the series \u2014 picks up where the first stops. Industry specialist, hands-on throughout.', detail: 'The second workshop builds on the first. Topic follows once the series is locked with the specialists conducting it.', meta: [{ k: 'CONDUCTED BY', v: 'Industry specialist' }, { k: 'DATE', v: 'NA' }, { k: 'TIME', v: 'NA' }, { k: 'VENUE', v: 'NA' }], takeaways: ['A working build from the session', 'A certificate of participation'] },
-    { id: 'w3', tag: 'WORKSHOP', kind: 'WORKSHOP', status: 'TOPIC \u00b7 TBA', title: 'Workshop 03', date: 'DATE NA \u00b7 TIME NA \u00b7 VENUE NA', blurb: 'Closes the series \u2014 the most advanced of the three. Industry specialist, hands-on throughout.', detail: 'The final workshop of the series and the deepest. Topic to be announced with the rest of the series.', meta: [{ k: 'CONDUCTED BY', v: 'Industry specialist' }, { k: 'DATE', v: 'NA' }, { k: 'TIME', v: 'NA' }, { k: 'VENUE', v: 'NA' }], takeaways: ['A working build from the session', 'A certificate of participation'] },
-    { id: 'h1', tag: 'HACKATHON', kind: 'HACKATHON', status: 'FLAGSHIP', title: 'ADG Hackathon', date: 'DATE NA \u00b7 TIME NA \u00b7 VENUE NA', blurb: 'The flagship. Teams, a live brief, and a working demo or it does not count.', detail: 'The one marquee event of the term. Teams build against a brief released at the start; judging weighs a working demo over a pretty deck. Dates, venue and team size will be announced.', meta: [{ k: 'FORMAT', v: 'Team event' }, { k: 'DATE', v: 'NA' }, { k: 'TIME', v: 'NA' }, { k: 'VENUE', v: 'NA' }], takeaways: ['A shipped project under time pressure', 'A judged entry for your CV'] },
-    { id: 's1', tag: 'SEMINAR', kind: 'SEMINAR', status: 'PLANNED', title: 'Seminar 01', date: 'DATE NA \u00b7 TIME NA \u00b7 VENUE NA', blurb: 'One speaker worth the hour \u2014 on how AI/ML actually gets built outside the classroom.', detail: 'A sit-down session with an industry or academic guest. Speaker and topic will be announced together with the date.', meta: [{ k: 'FORMAT', v: 'Talk + Q&A' }, { k: 'DATE', v: 'NA' }, { k: 'TIME', v: 'NA' }, { k: 'VENUE', v: 'NA' }], takeaways: ['Notes published afterwards', 'Q&A time that is actually enough'] },
-    { id: 's2', tag: 'SEMINAR', kind: 'SEMINAR', status: 'TENTATIVE', title: 'Seminar 02', date: 'DATE NA \u00b7 TIME NA \u00b7 VENUE NA', blurb: 'A possible second seminar \u2014 pencilled in, honestly labelled.', detail: 'Held as tentative until the term calendar settles. If it runs: one good speaker, one focused hour, published notes.', meta: [{ k: 'FORMAT', v: 'Talk + Q&A' }, { k: 'DATE', v: 'NA' }, { k: 'TIME', v: 'NA' }, { k: 'VENUE', v: 'NA' }], takeaways: ['Notes published afterwards', 'Q&A time that is actually enough'] }
-  ];
-
-  lvl1 = [
-    { role: 'HEAD OF DEPARTMENT', name: 'Dr. Joanne Gomes' },
-    { role: 'FACULTY COORDINATOR', name: 'Ms. Priyanka Patil' },
-    { role: 'FACULTY CO-COORDINATOR', name: 'Mr. Amol Lachake' }
-  ];
-
-  lvl2 = [
-    { role: 'PRESIDENT', name: 'Anlea Jose' },
-    { role: 'VICE-PRESIDENT', name: 'Krishnakumar Mandal' },
-    { role: 'GENERAL SECRETARY', name: 'Prashant Jha' },
-    { role: 'TREASURER', name: 'Aditya Soni' }
-  ];
-
-  facultyTop = this.lvl1[0];
-  facultyChildren = this.lvl1.slice(1);
-  coreTop = this.lvl2[0];
-  coreChildren = this.lvl2.slice(1);
-
-  domains = [ 
-    { name: 'Technical', head: 'Jitesh Zope', joint: ['Angel Xavier', 'Moin Mulla'], execs: ['Rohan Satkar', 'Trishal Raut', 'Neev Darji', 'Catilin Moraes', 'Yashaang Adhikari', 'Hitansh Jain'] },
-    { name: 'Public Relations', head: 'Kennan Mascarenhas', joint: ['Sanika Dongarkar'], execs: ['Dipika Mishra', 'Mohammad Hamza', 'Aman Thatte', 'Krish Dave'] },
-    { name: 'Webmaster', head: 'Anish Desai', joint: ['Riddhi Patil'], execs: ['Joel Almedia', 'Roshan Mathew', 'Ansel Almedia'] },
-    { name: 'Marketing', head: 'Riddhi Manjrekar', joint: ['Aldrin Serrao'], execs: ['Ryan Salve', 'Chirag Chavan'] },
-    { name: 'Logistics', head: 'Joel Varghese', joint: ['Kenn Machado'], execs: ['Jaden Borges'] },
-    { name: 'Multimedia', head: 'Nihar Naringrekar', joint: ['Agastya Shetty'], execs: ['Riwan Pereria', 'Nakul Burkul', 'Husain Ratlamwala', 'Nilam Shinde', 'Deekhsha Moiya'] },
-    { name: 'Graphics', head: 'Royan Dsouza', joint: ['Sharon Elango'], execs: ['Aamir Khan', 'Ahana Kanchan', 'Gayatri Pillay'] },
-    { name: 'Creatives', head: 'Mariam Badure', joint: ['Tanvi Patil', 'Veera Pereria'], execs: ['Komal Mulik', 'Carol Chetty', 'Bethany Misquitta', 'Prajwal Kola', 'Bhoni Dodmani'] }
-  ];
-
-  domainLevels = this.domains.map((dm, i) => ({
-    idx: i + 2,
-    tag: 'LEVEL ' + (i + 3 < 10 ? '0' : '') + (i + 3) + ' \u00b7 DOMAIN',
-    name: dm.name,
-    head: dm.head,
-    joint: dm.joint.map(n => ({ name: n })),
-    hasJoint: dm.joint.length > 0,
-    execs: dm.execs.map(n => ({ name: n })),
-    note: dm.joint.length ? '' : 'Joint head to be announced'
-  }));
-
-  treeLevels = [{ label: 'HOD & COORDINATORS' }, { label: 'CORE' }].concat(
-    this.domains.map(d => ({ label: d.name.toUpperCase() }))
-  );
-
-  lvl1 = [
-    { role: 'HEAD OF DEPARTMENT', name: 'Dr. Joanne Gomes' },
-    { role: 'FACULTY COORDINATOR', name: 'Ms. Priyanka Patil' },
-    { role: 'FACULTY CO-COORDINATOR', name: 'Mr. Amol Lachake' }
-  ];
-
-  lvl2 = [
-    { role: 'PRESIDENT', name: 'Anlea Jose' },
-    { role: 'VICE-PRESIDENT', name: 'Krishnakumar Mandal' },
-    { role: 'GENERAL SECRETARY', name: 'Prashant Jha' },
-    { role: 'TREASURER', name: 'Aditya Soni' }
-  ];
-
-  albums = [
-    { id: 'a2627', title: '2026\u201327', meta: 'ALBUM 01 \u00b7 PHOTOS COMING', cover: 'ALBUM COVER \u2014 DROP THE BEST SHOT\nOF THE YEAR HERE', count: '8 SLOTS', photos: [
-      { title: 'Kickoff', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 01 \u2014 COMMITTEE KICKOFF' },
-      { title: 'Workshop 01', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 02 \u2014 WORKSHOP, LAB WIDE SHOT' },
-      { title: 'Workshop 02', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 03 \u2014 HANDS ON KEYBOARDS' },
-      { title: 'Workshop 03', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 04 \u2014 SPECIALIST MID-SESSION' },
-      { title: 'Seminar', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 05 \u2014 SPEAKER AND AUDIENCE' },
-      { title: 'Hackathon', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 06 \u2014 TEAMS BUILDING, NIGHT SHOT' },
-      { title: 'Demos', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 07 \u2014 PROJECT DEMO ON SCREEN' },
-      { title: 'The committee', caption: 'ADG \u00b7 2026\u201327', label: 'DROP PHOTO 08 \u2014 FULL TEAM GROUP SHOT' }
-    ] }
-  ];
-
-  photos = this.albums[0].photos;
-
-
-  pipeline = [
-    { n: '1', title: 'Member', body: 'Show up to sessions. That is genuinely the whole requirement.' },
-    { n: '2', title: 'Contributor', body: 'Help run an event, write notes, fix an issue on the repo, mentor a beginner.' },
-    { n: '3', title: 'Core team', body: 'Own a domain for a year. Trained before you get it, documented before you leave it.' }
-  ];
-
-  formAsks = ['Name, year and branch', 'College email', 'Which tier you want to start at', 'What you have built so far \u2014 "nothing yet" is a valid answer'];
-
   socials = [
-    { name: 'Instagram', label: 'IG', href: '#contact' },
-    { name: 'LinkedIn', label: 'LI', href: '#contact' },
-    { name: 'GitHub', label: 'GH', href: '#contact' },
-    { name: 'Email', label: '@', href: '#contact' }
+    { name: 'Instagram', label: 'IG', href: 'https://instagram.com' },
+    { name: 'LinkedIn', label: 'LI', href: 'https://linkedin.com' },
+    { name: 'GitHub', label: 'GH', href: 'https://github.com' },
+    { name: 'Email', label: '@', href: 'mailto:adg@sfit.ac.in' }
   ];
 
   programmeLinks = [
-    { label: 'Workshop series', href: '#events' },
-    { label: 'ADG Hackathon', href: '#events' },
-    { label: 'Seminars', href: '#events' },
-    { label: 'Gallery albums', href: '#gallery' },
-    { label: 'Join the committee', href: '#join' }
+    { label: 'Workshop series', href: 'events.html' },
+    { label: 'ADG Hackathon', href: 'events.html' },
+    { label: 'Seminars', href: 'events.html' },
+    { label: 'Gallery albums', href: 'gallery.html' },
+    { label: 'Join the committee', href: 'join.html' }
   ];
 
   get motion() {
@@ -1281,7 +663,6 @@ class Component extends DCLogic {
   componentDidMount() {
     this.reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     this.applyAccent();
-    this.lvlIdx = -1;
     this.onResize();
     window.addEventListener('resize', this.onResize);
     window.addEventListener('scroll', this.onScroll, { passive: true });
@@ -1290,10 +671,8 @@ class Component extends DCLogic {
     this.io = new IntersectionObserver(this.onIntersect, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     this.observeAll();
     this.applyMotion();
-    this.syncButtons();
     this.onScroll();
 
-    this.wordIdx = 0;
     this.lineIdx = 0;
     this.charIdx = 0;
     if (!this.reduced) {
@@ -1304,15 +683,13 @@ class Component extends DCLogic {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.accentColor !== this.props.accentColor) this.applyAccent();
     if (prevProps.motion !== this.props.motion) this.applyMotion();
-    if (prevState.filter !== this.state.filter) this.syncButtons();
-    if (prevState.filter !== this.state.filter || prevState.isMobile !== this.state.isMobile) this.observeAll();
+    if (prevState.isMobile !== this.state.isMobile) this.observeAll();
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
     window.removeEventListener('scroll', this.onScroll);
     document.removeEventListener('keydown', this.onKey);
-    clearInterval(this.wordTimer);
     clearTimeout(this.typeTimer);
     clearTimeout(this.toastTimer);
     if (this.io) this.io.disconnect();
@@ -1324,14 +701,12 @@ class Component extends DCLogic {
     document.documentElement.style.setProperty('--adg-accent', c);
   }
 
-  rootRef = el => { this.rootEl = el; if (el) { this.observeAll(); this.applyMotion(); this.syncButtons(); this.bindTilt(); } };
+  rootRef = el => { this.rootEl = el; if (el) { this.observeAll(); this.applyMotion(); this.bindTilt(); } };
   headerRef = el => { this.headerEl = el; };
   topRef = el => { this.topEl = el; };
   heroArtRef = el => { this.heroArtEl = el; };
   badgeRef = el => { this.badgeEl = el; };
   consoleRef = el => { this.consoleEl = el; };
-  treeRef = el => { this.treeEl = el; };
-  lvlLabelRef = el => { this.lvlLabelEl = el; };
 
   q(sel) { return Array.prototype.slice.call((this.rootEl || document).querySelectorAll(sel)); }
 
@@ -1351,14 +726,9 @@ class Component extends DCLogic {
       h.style.paddingBottom = on ? '10px' : '18px';
       h.style.boxShadow = on ? '0 14px 34px -26px rgba(0,0,0,.95)' : 'none';
     }
-    let active = this.navLinks[0].id;
-    this.navLinks.forEach(l => {
-      const s = document.getElementById(l.id);
-      if (s && s.getBoundingClientRect().top <= 150) active = l.id;
-    });
     if (!this.navEls || !this.navEls.length) this.navEls = this.q('[data-nav]');
     this.navEls.forEach(a => {
-      const on = a.getAttribute('data-nav') === active;
+      const on = a.getAttribute('data-nav') === this.currentPage;
       a.style.color = on ? 'var(--adg-accent,#4fd0dc)' : '#9aa7c0';
       const u = a.querySelector('[data-underline]');
       if (u) u.style.transform = on ? 'scaleX(1)' : 'scaleX(0)';
@@ -1369,31 +739,6 @@ class Component extends DCLogic {
       this.topEl.style.pointerEvents = on ? 'auto' : 'none';
       this.topEl.style.transform = on ? 'translateY(0)' : 'translateY(12px)';
     }
-    if (this.treeEl) {
-      const sec = this.treeEl.parentElement;
-      const r = sec.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const span = r.height - vh;
-      const pr = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
-      const last = this.treeLevels.length - 1;
-      const idx = Math.min(last, Math.round(pr * last));
-      if (idx !== this.lvlIdx) {
-        this.lvlIdx = idx;
-        if (!this.lvlEls || !this.lvlEls.length) this.lvlEls = this.q('[data-level]');
-        this.lvlEls.forEach(el => {
-          const i = +el.dataset.level;
-          const on = i === idx;
-          el.style.opacity = on ? '1' : '0';
-          el.style.transform = on ? 'none' : 'translateY(' + (i < idx ? -60 : 60) + 'px)';
-          el.style.pointerEvents = on ? 'auto' : 'none';
-        });
-        if (!this.lvlBtns || !this.lvlBtns.length) this.lvlBtns = this.q('[data-lvlbtn]');
-        this.lvlBtns.forEach(b => {
-          b.style.background = +b.dataset.lvlbtn === idx ? 'var(--adg-accent,#4fd0dc)' : 'rgba(241,237,227,.15)';
-        });
-        if (this.lvlLabelEl) this.lvlLabelEl.textContent = 'LEVEL ' + (idx + 1) + ' OF ' + this.treeLevels.length + ' \u00b7 ' + this.treeLevels[idx].label;
-      }
-    }
     this.heroAway = y > window.innerHeight;
     if (this.heroArtEl && !this.reduced && y < window.innerHeight * 1.3) {
       this.heroArtEl.style.transform = 'translateY(' + (y * 0.05).toFixed(1) + 'px)';
@@ -1401,10 +746,7 @@ class Component extends DCLogic {
   };
 
   onKey = e => {
-    if (e.key !== 'Escape') return;
-    if (this.state.lightboxOpen) this.setState({ lightboxOpen: false });
-    else if (this.state.openEvent) this.setState({ openEvent: null });
-    else if (this.state.navOpen) this.setState({ navOpen: false });
+    if (e.key === 'Escape' && this.state.navOpen) this.setState({ navOpen: false });
   };
 
   onIntersect = entries => {
@@ -1419,9 +761,6 @@ class Component extends DCLogic {
       el.style.opacity = '1';
       el.style.transform = 'none';
       el.dataset.shown = '1';
-      const rail = el.querySelector('[data-rail]');
-      if (rail) setTimeout(() => { rail.style.transform = 'scaleX(1)'; }, 120 + Math.min(idx, 7) * m.stagger);
-      if (el.hasAttribute('data-counters')) this.runCounters(el);
       this.io.unobserve(el);
     });
   };
@@ -1429,25 +768,6 @@ class Component extends DCLogic {
   observeAll() {
     if (!this.io) return;
     this.q('[data-reveal]').forEach(el => { if (!el.dataset.shown) this.io.observe(el); });
-  }
-
-  runCounters(scope) {
-    const dur = Math.max(700, this.motion.dur * 1.7);
-    scope.querySelectorAll('[data-count]').forEach(n => {
-      if (n.dataset.counted) return;
-      n.dataset.counted = '1';
-      const target = parseFloat(n.dataset.count) || 0;
-      const suffix = n.dataset.suffix || '';
-      if (this.reduced) { n.textContent = target + suffix; return; }
-      const t0 = performance.now();
-      const step = t => {
-        const p = Math.min(1, (t - t0) / dur);
-        const e = 1 - Math.pow(1 - p, 3);
-        n.textContent = Math.round(target * e) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    });
   }
 
   applyMotion() {
@@ -1472,15 +792,6 @@ class Component extends DCLogic {
       el.addEventListener('pointermove', move);
       el.addEventListener('pointerleave', leave);
       this.tiltBound.push([el, move, leave]);
-    });
-  }
-
-  syncButtons() {
-    this.q('[data-filter]').forEach(b => {
-      const on = b.dataset.filter === this.state.filter;
-      b.style.background = on ? 'var(--adg-accent,#4fd0dc)' : 'transparent';
-      b.style.color = on ? '#0c1426' : '#9aa7c0';
-      b.style.borderColor = on ? 'var(--adg-accent,#4fd0dc)' : 'rgba(241,237,227,.16)';
     });
   }
 
@@ -1516,128 +827,26 @@ class Component extends DCLogic {
     this.toast(this.quips[(this.pokes - 1) % this.quips.length]);
   };
 
-  goLevel = e => {
-    const i = parseInt(e.currentTarget.dataset.lvlbtn, 10) || 0;
-    if (!this.treeEl) return;
-    const sec = this.treeEl.parentElement;
-    const top = (window.scrollY || 0) + sec.getBoundingClientRect().top;
-    window.scrollTo({ top: top + i * window.innerHeight + 2, behavior: this.reduced ? 'auto' : 'smooth' });
-  };
-
   toggleNav = () => this.setState(s => ({ navOpen: !s.navOpen }));
   closeNav = () => this.setState({ navOpen: false });
   scrollTop = () => window.scrollTo({ top: 0, behavior: this.reduced ? 'auto' : 'smooth' });
-  stop = e => { e.stopPropagation(); };
-  closeEvent = () => this.setState({ openEvent: null });
-  closeLightbox = () => this.setState({ lightboxOpen: false });
-  prevShot = e => { e.stopPropagation(); this.setState(s => ({ shotIndex: (s.shotIndex - 1 + this.photos.length) % this.photos.length })); };
-  nextShot = e => { e.stopPropagation(); this.setState(s => ({ shotIndex: (s.shotIndex + 1) % this.photos.length })); };
-
-  setFilter = e => {
-    const k = e.currentTarget.dataset.filter;
-    if (k !== this.state.filter) this.setState({ filter: k });
-  };
-
-  openEvent = e => {
-    const id = e.currentTarget.dataset.id;
-    if (id) this.setState({ openEvent: id });
-  };
-
-  openShot = () => this.setState({ lightboxOpen: true, shotIndex: 0 });
-
-  operatingRows() {
-    const c = this.cache();
-    if (!c.operatingRows) c.operatingRows = this.operating.map(t => ({ label: t }));
-    return c.operatingRows;
-  }
-
-  formAskRows() {
-    const c = this.cache();
-    if (!c.formAskRows) c.formAskRows = this.formAsks.map(t => ({ label: t }));
-    return c.formAskRows;
-  }
-
-  cache() {
-    if (this._c) return this._c;
-    this._c = {
-      marquee: this.marqueeDomains.concat(this.marqueeDomains).map((d, i) => ({ label: d, key: i })),
-      filters: ['All', 'WORKSHOP', 'HACKATHON', 'SEMINAR'].map(k => ({ key: k, label: k === 'All' ? 'EVERYTHING' : k.toUpperCase() })),
-      lists: {},
-      meta: {},
-      takeaways: {},
-      emptyList: [],
-      emptyEvent: { tag: '', title: '', detail: '' }
-    };
-    return this._c;
-  }
-
-  eventsFor(filter) {
-    const c = this.cache();
-    if (!c.lists[filter]) {
-      c.lists[filter] = filter === 'All' ? this.events : this.events.filter(e => e.kind === filter || e.tag === filter);
-    }
-    return c.lists[filter];
-  }
-
-  takeawaysFor(ev) {
-    const c = this.cache();
-    if (!c.takeaways[ev.id]) c.takeaways[ev.id] = ev.takeaways.map(t => ({ label: t }));
-    return c.takeaways[ev.id];
-  }
 
   renderVals() {
     const st = this.state;
-    const c = this.cache();
-    let active = null;
-    for (let i = 0; i < this.events.length; i++) if (this.events[i].id === st.openEvent) active = this.events[i];
-    const shot = this.photos[st.shotIndex] || this.photos[0];
+    const marqueeList = this.marqueeDomains.concat(this.marqueeDomains).map((d, i) => ({ label: d, key: i }));
 
     return {
       rootRef: this.rootRef, headerRef: this.headerRef, topRef: this.topRef,
       heroArtRef: this.heroArtRef, badgeRef: this.badgeRef,
       consoleRef: this.consoleRef,
-      treeRef: this.treeRef, lvlLabelRef: this.lvlLabelRef,
-
       isMobile: st.isMobile, isDesktop: !st.isMobile, navOpen: st.navOpen,
-
       navLinks: this.navLinks,
-      marquee: c.marquee,
-      usps: this.usps,
-      missions: this.missions,
-      objectives: this.objectives,
-      pipeline: this.pipeline,
+      marquee: marqueeList,
       socials: this.socials,
       programmeLinks: this.programmeLinks,
-      operating: this.operatingRows(),
-      formAsks: this.formAskRows(),
-      treeLevels: this.treeLevels,
-      facultyTop: this.facultyTop, facultyChildren: this.facultyChildren,
-      coreTop: this.coreTop, coreChildren: this.coreChildren,
-      domainLevels: this.domainLevels,
-      goLevel: this.goLevel,
-
-      filters: c.filters,
-      setFilter: this.setFilter,
-      openEvent: this.openEvent,
-      openShot: this.openShot,
-      visibleEvents: this.eventsFor(st.filter),
-      eventOpen: !!active,
-      activeEvent: active || c.emptyEvent,
-      activeEventMeta: active ? active.meta : c.emptyList,
-      activeEventTakeaways: active ? this.takeawaysFor(active) : c.emptyList,
-
-      albums: this.albums,
-      lightboxOpen: st.lightboxOpen,
-      activeShot: shot,
-      albumTitle: this.albums[0].title,
-      lightboxCounter: (st.shotIndex + 1) + ' / ' + this.photos.length,
-
       toastOn: !!st.toast, toastMsg: st.toast,
-
       toggleNav: this.toggleNav, closeNav: this.closeNav,
-      scrollTop: this.scrollTop, stop: this.stop, badgePoke: this.badgePoke,
-      closeEvent: this.closeEvent, closeLightbox: this.closeLightbox,
-      prevShot: this.prevShot, nextShot: this.nextShot
+      scrollTop: this.scrollTop, badgePoke: this.badgePoke
     };
   }
 }

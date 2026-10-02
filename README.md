@@ -1,6 +1,6 @@
 # ADG — AI Developers Group
 
-Single-page website for ADG, the AI/ML committee at SFIT.
+Multi-page website for ADG, the AI/ML committee at SFIT.
 
 ## Stack
 
@@ -8,7 +8,13 @@ Static site, no build step.
 
 | File | Purpose |
 |---|---|
-| `index.html` | The entire page — markup template (`<x-dc>`) + component logic (`<script data-dc-script>`) |
+| `index.html` | Homepage: Hero, live terminal, spinning badge, domain marquee & section directory |
+| `about.html` | About ADG, committee philosophy, 3 USPs, Year 1 targets with counter animation |
+| `mission.html` | Vision quote, 3 core mission points, and 4 departmental objectives |
+| `events.html` | Term 1 workshops, flagship hackathon, category filters & interactive detail modal |
+| `team.html` | 10-level organizational hierarchy (Faculty, Core, 8 Domains) with interactive level switcher |
+| `gallery.html` | Photo archive & albums with full interactive lightbox modal |
+| `join.html` | 3-tier membership pipeline & Google Form registration details |
 | `support.js` | Runtime that parses the template, compiles the JSX/logic and mounts it with React |
 | `assets/adg-badge.png` | Logo / favicon (the only asset the page loads) |
 | `netlify.toml` | Netlify config: publish root, cache and security headers |
