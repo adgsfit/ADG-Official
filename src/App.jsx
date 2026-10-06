@@ -1,52 +1,62 @@
-import React, { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import ScrollToTopButton, { ScrollToTopOnNavigate } from './components/ScrollToTop/ScrollToTop';
-import Toast from './components/Toast/Toast';
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Mission from "./pages/Mission.jsx";
+import Events from "./pages/Events.jsx";
+import Team from "./pages/Team.jsx";
+import Gallery from "./pages/Gallery.jsx";
+import Join from "./pages/Join.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import { navLinks } from "./data/navigation.js";
 
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Mission from './pages/Mission/Mission';
-import Events from './pages/Events/Events';
-import Team from './pages/Team/Team';
-import Gallery from './pages/Gallery/Gallery';
-import Join from './pages/Join/Join';
+function RouteEffects() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    const link = navLinks.find((l) => l.href === pathname);
+    document.title =
+      pathname === "/" ? "ADG — AI Developers Group, SFIT" : `${link ? link.label : "Not found"} — ADG, SFIT`;
+  }, [pathname]);
+
+  useEffect(() => {
+    const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) {
+        el.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+        return;
+      }
+    }
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+
+  return null;
+}
 
 export default function App() {
-  const [toastMsg, setToastMsg] = useState('');
-  const [toastTimer, setToastTimer] = useState(null);
-
-  const showToast = (msg) => {
-    if (toastTimer) clearTimeout(toastTimer);
-    setToastMsg(msg);
-    const timer = setTimeout(() => {
-      setToastMsg('');
-    }, 2300);
-    setToastTimer(timer);
-  };
-
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <ScrollToTopOnNavigate />
-      <Navbar />
-
-      <div style={{ flex: 1 }}>
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <RouteEffects />
+      <Header />
+      <main id="main">
         <Routes>
-          <Route path="/" element={<Home onShowToast={showToast} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/events" element={<Events />} />
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/join" element={<Join />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </div>
-
+      </main>
       <Footer />
-      <ScrollToTopButton />
-      <Toast message={toastMsg} />
-    </div>
+    </>
   );
 }

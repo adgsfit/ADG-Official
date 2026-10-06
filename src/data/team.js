@@ -1,3 +1,5 @@
+import { linkedinUrls } from './linkedin.js';
+
 export const lvl1 = [
   { role: 'HEAD OF DEPARTMENT', name: 'Dr. Joanne Gomes' },
   { role: 'FACULTY COORDINATOR', name: 'Ms. Priyanka Patil' },
@@ -5,7 +7,7 @@ export const lvl1 = [
 ];
 
 export const lvl2 = [
-  { role: 'PRESIDENT', name: 'Anlea Jose' },
+  { role: 'PRESIDENT', name: 'Anlea Maria Jose' },
   { role: 'VICE-PRESIDENT', name: 'Krishnakumar Mandal' },
   { role: 'GENERAL SECRETARY', name: 'Prashant Jha' },
   { role: 'TREASURER', name: 'Aditya Soni' }
@@ -26,19 +28,19 @@ export const domains = [
     name: 'Technical',
     head: 'Jitesh Zope',
     joint: ['Angel Xavier', 'Moin Mulla'],
-    execs: ['Rohan Satkar', 'Trishal Raut', 'Neev Darji', 'Catilin Moraes', 'Yashaang Adhikari', 'Hitansh Jain']
+    execs: ['Rohan Satkar', 'Trishal Raut', 'Neev Darji', 'Caitlin Moraes', 'Yashaang Adhikari', 'Hitansh Jani']
   },
   {
     name: 'Public Relations',
     head: 'Kennan Mascarenhas',
     joint: ['Sanika Dongarkar'],
-    execs: ['Dipika Mishra', 'Mohammad Hamza', 'Aman Thatte', 'Krish Dave']
+    execs: ['Dipika Mishra', 'Mohammed Hamzah', 'Aman Thatte', 'Krish Deval']
   },
   {
     name: 'Webmaster',
     head: 'Anish Desai',
     joint: ['Riddhi Patil'],
-    execs: ['Joel Almedia', 'Roshan Mathew', 'Ansel Almedia']
+    execs: ['Joel Almeida', 'Roshan Mathew', 'Ansel Almeida']
   },
   {
     name: 'Marketing',
@@ -48,15 +50,15 @@ export const domains = [
   },
   {
     name: 'Logistics',
-    head: 'Joel Varghese',
-    joint: ['Kenn Machado'],
-    execs: ['Jaden Borges']
+    head: 'Joel',
+    joint: ['Kenn'],
+    execs: ['Jaden']
   },
   {
     name: 'Multimedia',
     head: 'Nihar Naringrekar',
     joint: ['Agastya Shetty'],
-    execs: ['Riwan Pereria', 'Nakul Burkul', 'Husain Ratlamwala', 'Nilam Shinde', 'Deekhsha Moiya']
+    execs: ['Riwan Pereira', 'Nakul Burkul', 'Husain Ratlamwala', 'Nilam Shinde', 'Deeksha Moolya']
   },
   {
     name: 'Graphics',
@@ -67,7 +69,7 @@ export const domains = [
   {
     name: 'Creatives',
     head: 'Mariam Badure',
-    joint: ['Tanvi Patil', 'Veera Pereria'],
+    joint: ['Tanvi Patil', 'Vera Pereira'],
     execs: ['Komal Mulik', 'Carol Chetty', 'Bethany Misquitta', 'Prajwal Kola', 'Bhoni Dodmani']
   }
 ];
@@ -99,11 +101,11 @@ export function getRoleBio(role, domain) {
   if (r.includes('COORDINATOR')) {
     return 'Bridges institutional curriculum with hands-on committee projects, reviewing event syllabi, workshop roadmaps, and student credentials.';
   }
-  if (r.includes('PRESIDENT')) {
-    return 'Leads ADG overall vision, strategic partnerships, flagship hackathon execution, and cross-domain synergy across the academic term.';
-  }
   if (r.includes('VICE-PRESIDENT')) {
     return 'Oversees operational workflows, internal committee coordination, timeline adherence, and student community initiatives.';
+  }
+  if (r.includes('PRESIDENT')) {
+    return 'Leads ADG overall vision, strategic partnerships, flagship hackathon execution, and cross-domain synergy across the academic term.';
   }
   if (r.includes('GENERAL SECRETARY')) {
     return 'Maintains official committee documentation, post-event reports, departmental approvals, and event calendar synchronization.';
@@ -148,6 +150,7 @@ export function getMemberData(name, role, domain) {
     initials = words[0].slice(0, 2).toUpperCase();
   }
 
+  const direct = (linkedinUrls[cleanName] || '').trim();
   const query = encodeURIComponent(cleanName + ' SFIT');
   const ghQuery = encodeURIComponent(cleanName.replace(/\s+/g, ''));
   const igQuery = encodeURIComponent(cleanName.toLowerCase().replace(/\s+/g, '_'));
@@ -157,10 +160,11 @@ export function getMemberData(name, role, domain) {
     role: role || 'Committee Member',
     domain: domain || 'ADG SFIT',
     initials: initials,
-    linkedin: 'https://www.linkedin.com/search/results/all/?keywords=' + query,
+    linkedin: direct || 'https://www.linkedin.com/search/results/all/?keywords=' + query,
+    hasLinkedin: !!direct,
     github: 'https://github.com/search?q=' + ghQuery,
     instagram: 'https://www.instagram.com/' + igQuery,
-    email: 'mailto:adg@sfit.ac.in?subject=Connecting%20with%20' + encodeURIComponent(cleanName),
+    email: 'mailto:sfit.aidg@gmail.com?subject=Connecting%20with%20' + encodeURIComponent(cleanName),
     bio: getRoleBio(role, domain)
   };
 }

@@ -1,25 +1,59 @@
+import { events } from './events.js';
+
+const YEAR = 'ADG · 2026–27';
+
+// ── Group photos: loaded automatically from src/assets/gallery ──────────────
+const files = import.meta.glob('../assets/gallery/*.{jpg,jpeg,png,webp}', {
+  eager: true,
+  query: '?url',
+  import: 'default'
+});
+
+const titleFromFile = (path) => {
+  const base = path.split('/').pop().replace(/\.[^.]+$/, '');
+  const text = base
+    .replace(/^\d+[\s._-]*/, '') // leading "01-"
+    .replace(/[-_]+/g, ' ')
+    .trim();
+  return text ? text.charAt(0).toUpperCase() + text.slice(1) : 'Group photo';
+};
+
+const groupPhotos = Object.entries(files)
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(([path, src]) => ({ title: titleFromFile(path), caption: YEAR, src }));
+
+// Nothing in the folder yet: show a few empty slots instead of a blank page.
+const groupPlaceholders = ['Full committee', 'Core team', 'Domain heads'].map((title) => ({
+  title,
+  caption: YEAR,
+  pending: 'Photo to come',
+  label: 'Group photo to be added'
+}));
+
+// ── Upcoming events: one empty slot per event on the Events page ────────────
+const upcomingSlots = events.map((e) => ({
+  title: e.title,
+  caption: YEAR,
+  pending: 'Coming soon',
+  label: 'Photos will be added after the event'
+}));
+
+const group = groupPhotos.length ? groupPhotos : groupPlaceholders;
+
 export const albums = [
   {
-    id: 'a2627',
-    title: '2026–27',
-    meta: 'ALBUM 01 · PHOTOS COMING',
-    cover: 'ALBUM COVER — DROP THE BEST SHOT\nOF THE YEAR HERE',
-    count: '8 SLOTS',
-    photos: [
-      { title: 'Kickoff', caption: 'ADG · 2026–27', label: 'DROP PHOTO 01 — COMMITTEE KICKOFF' },
-      { title: 'Workshop 01', caption: 'ADG · 2026–27', label: 'DROP PHOTO 02 — WORKSHOP, LAB WIDE SHOT' },
-      { title: 'Workshop 02', caption: 'ADG · 2026–27', label: 'DROP PHOTO 03 — HANDS ON KEYBOARDS' },
-      { title: 'Workshop 03', caption: 'ADG · 2026–27', label: 'DROP PHOTO 04 — SPECIALIST MID-SESSION' },
-      { title: 'Seminar', caption: 'ADG · 2026–27', label: 'DROP PHOTO 05 — SPEAKER AND AUDIENCE' },
-      { title: 'Hackathon', caption: 'ADG · 2026–27', label: 'DROP PHOTO 06 — TEAMS BUILDING, NIGHT SHOT' },
-      { title: 'Demos', caption: 'ADG · 2026–27', label: 'DROP PHOTO 07 — PROJECT DEMO ON SCREEN' },
-      { title: 'The committee', caption: 'ADG · 2026–27', label: 'DROP PHOTO 08 — FULL TEAM GROUP SHOT' }
-    ]
+    id: 'group',
+    title: 'Group photos',
+    meta: groupPhotos.length ? 'THE COMMITTEE · 2026–27' : 'THE COMMITTEE · PHOTOS COMING',
+    count: `${group.length} ${groupPhotos.length ? 'PHOTOS' : 'SLOTS'}`,
+    photos: group
+  },
+  {
+    id: 'upcoming',
+    title: 'Upcoming events',
+    meta: 'NO EVENTS YET · PHOTOS WILL APPEAR HERE',
+    count: `${upcomingSlots.length} SLOTS`,
+    layout: 'even',
+    photos: upcomingSlots
   }
 ];
-
-export const galleryPhotos = albums[0].photos.map((p, i) => ({
-  ...p,
-  idx: i,
-  num: '0' + (i + 1)
-}));
