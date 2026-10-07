@@ -1,20 +1,64 @@
 export const eventFilters = [
   { key: 'All', label: 'EVERYTHING' },
   { key: 'WORKSHOP', label: 'WORKSHOP' },
+  { key: 'GAME', label: 'GAME' },
   { key: 'HACKATHON', label: 'HACKATHON' },
   { key: 'SEMINAR', label: 'SEMINAR' }
 ];
 
+// Each event belongs to a semester via its `sem` number (1 or 2). Edit the notes freely.
+export const semesters = [
+  { sem: 1, title: 'Semester 1', note: 'This semester · AY 2026–27' },
+  { sem: 2, title: 'Semester 2', note: 'Up next · AY 2026–27' }
+];
+
 export const events = [
   {
+    id: 'm1',
+    sem: 1,
+    tag: 'GAME',
+    kind: 'GAME',
+    status: 'PLANNED',
+    title: 'Mosaic: Game of Deception',
+    date: 'DATE NA · TIME NA · VENUE NA',
+    blurb: 'Mosaic, our game of deception. Rules, rounds and team format will be shared closer to the date.',
+    detail: 'Mosaic is ADG\'s game of deception, planned for Semester 1. The full rules, team format and schedule will be announced together with the date and venue.',
+    meta: [
+      { k: 'FORMAT', v: 'Game event' },
+      { k: 'DATE', v: 'NA' },
+      { k: 'TIME', v: 'NA' },
+      { k: 'VENUE', v: 'NA' }
+    ],
+    takeaways: ['A game night with the committee', 'A certificate of participation']
+  },
+  {
+    id: 'c1',
+    sem: 1,
+    tag: 'WORKSHOP',
+    kind: 'WORKSHOP',
+    status: 'PLANNED',
+    title: 'AI in Cybersecurity Workshop',
+    date: 'DATE NA · TIME NA · VENUE NA',
+    blurb: 'A hands-on workshop on how AI is used to defend, and to attack, in cybersecurity.',
+    detail: 'A hands-on workshop on the role of AI in cybersecurity, planned for Semester 1. The speaker, tools and exact agenda will be announced together with the date and venue.',
+    meta: [
+      { k: 'CONDUCTED BY', v: 'To be announced' },
+      { k: 'DATE', v: 'NA' },
+      { k: 'TIME', v: 'NA' },
+      { k: 'VENUE', v: 'NA' }
+    ],
+    takeaways: ['A working build from the session', 'A certificate of participation']
+  },
+  {
     id: 'w1',
+    sem: 2,
     tag: 'WORKSHOP',
     kind: 'WORKSHOP',
     status: 'TOPIC · TBA',
     title: 'Workshop 01',
     date: 'DATE NA · TIME NA · VENUE NA',
     blurb: 'Hands-on, laptops open, taken by an industry specialist. Topic being finalised — the format is not.',
-    detail: 'First of three workshops this term, conducted end-to-end by an industry specialist. The topic is being locked in; the format is fixed — you build along live and you leave with it running.',
+    detail: 'First of three workshops this semester, conducted end-to-end by an industry specialist. The topic is being locked in; the format is fixed — you build along live and you leave with it running.',
     meta: [
       { k: 'CONDUCTED BY', v: 'Industry specialist' },
       { k: 'DATE', v: 'NA' },
@@ -25,6 +69,7 @@ export const events = [
   },
   {
     id: 'w2',
+    sem: 2,
     tag: 'WORKSHOP',
     kind: 'WORKSHOP',
     status: 'TOPIC · TBA',
@@ -42,6 +87,7 @@ export const events = [
   },
   {
     id: 'w3',
+    sem: 2,
     tag: 'WORKSHOP',
     kind: 'WORKSHOP',
     status: 'TOPIC · TBA',
@@ -59,6 +105,7 @@ export const events = [
   },
   {
     id: 'h1',
+    sem: 2,
     tag: 'HACKATHON',
     kind: 'HACKATHON',
     status: 'FLAGSHIP',
@@ -76,6 +123,7 @@ export const events = [
   },
   {
     id: 's1',
+    sem: 2,
     tag: 'SEMINAR',
     kind: 'SEMINAR',
     status: 'PLANNED',
@@ -93,6 +141,7 @@ export const events = [
   },
   {
     id: 's2',
+    sem: 2,
     tag: 'SEMINAR',
     kind: 'SEMINAR',
     status: 'TENTATIVE',

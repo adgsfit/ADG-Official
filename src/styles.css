@@ -1229,21 +1229,34 @@ img.avatar {
   color: var(--ink);
   font-size: 1rem;
 }
+
+/* ▼▼▼ CHANGED: lightbox photo now fits whole (no cropping) ▼▼▼ */
 .lb-frame {
   display: grid;
   place-items: center;
-  aspect-ratio: 16 / 10;
   margin-top: 0.3rem;
   overflow: hidden;
-  border: 1px dashed var(--line);
+  border: 1px solid var(--line);
   border-radius: 14px;
+  background: var(--bg-2);
+}
+/* Empty slots keep a fixed 16:10 box with the striped pattern */
+.lb-frame--empty {
+  aspect-ratio: 16 / 10;
+  border-style: dashed;
   background: repeating-linear-gradient(135deg, var(--bg-2) 0 14px, var(--panel) 14px 28px);
 }
+/* Real photos: show the whole picture, any shape, never cropped, never taller than the screen */
 .lb-frame img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 14rem);
   object-fit: contain;
 }
+/* ▲▲▲ END OF CHANGE ▲▲▲ */
+
 .lb-empty {
   margin: 0;
   padding: 1rem;
@@ -1557,4 +1570,95 @@ img.avatar-xl {
   .gallery-grid--even {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+/* Lightbox zoom */
+.lb-frame {
+  position: relative;
+  touch-action: none;
+  user-select: none;
+}
+.lb-frame--zoomable {
+  cursor: zoom-in;
+}
+.lb-frame--zoomed {
+  cursor: grab;
+}
+.lb-frame--dragging {
+  cursor: grabbing;
+}
+.lb-frame img {
+  will-change: transform;
+  -webkit-user-drag: none;
+}
+.lb-zoom {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.25rem;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  cursor: default;
+}
+.lb-zoom button {
+  min-width: 2.3rem;
+  height: 2.3rem;
+  padding: 0 0.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 600 1.15rem/1 var(--font-body);
+  cursor: pointer;
+}
+.lb-zoom button:hover:not(:disabled) {
+  background: var(--panel);
+}
+.lb-zoom button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.lb-zoom .lb-level {
+  min-width: 3.6rem;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+a.chip {
+  text-decoration: none;
+}
+/* Events: semester sections */
+.sem {
+  margin-top: 2.6rem;
+}
+.sem:first-of-type {
+  margin-top: 0;
+}
+.sem-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 1.2rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+.sem-head h2 {
+  margin: 0;
+}
+.sem-head p {
+  margin: 0;
+  color: var(--muted);
+}
+.sem-empty {
+  color: var(--muted);
+}
+.event-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+.event-card--flagship h3 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
 }
