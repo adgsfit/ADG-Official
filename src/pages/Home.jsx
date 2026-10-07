@@ -21,7 +21,7 @@ const DIRECTORY = [
   {
     to: "/events",
     name: "Events",
-    title: "Term 1: workshops and hackathons",
+    title: "Two semesters: workshops, games and a hackathon",
     line: "Specialist-led sessions, the flagship hackathon, and published seminar notes.",
   },
   {
