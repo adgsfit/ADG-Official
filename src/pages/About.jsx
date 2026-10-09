@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { targets, usps } from "../data/about.js";
 import { useCountUp, useInView } from "../utils/hooks.js";
 import { sentence } from "../utils/text.js";
+import SocialLinks from "../components/SocialLinks.jsx";
 
 function Stat({ item }) {
   const [ref, seen] = useInView(0.4);
@@ -60,6 +61,8 @@ export default function About() {
               See events
             </Link>
           </div>
+          <p className="social-note">Or follow along:</p>
+          <SocialLinks />
         </div>
       </div>
     </div>

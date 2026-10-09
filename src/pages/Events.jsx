@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import Modal from "../components/Modal.jsx";
 import { eventFilters, events, operatingPrinciples, semesters } from "../data/events.js";
 import { orTba, sentence } from "../utils/text.js";
+import { posterFor } from "../utils/posters.js";
 
 const NUMBER_WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"];
 
@@ -54,6 +55,15 @@ export default function Events() {
                 <ul className="event-grid" role="list" key={filter}>
                   {list.map((e) => (
                     <li key={e.id} className={e.kind === "HACKATHON" ? "event-card event-card--flagship" : "event-card"}>
+                      {posterFor(e.poster) && (
+                        <img
+                          className="event-poster"
+                          src={posterFor(e.poster)}
+                          alt={`Poster for ${e.title}`}
+                          loading="lazy"
+                          onClick={() => setOpenId(e.id)}
+                        />
+                      )}
                       <p className="event-status">{sentence(e.status)}</p>
                       <h3>{e.title}</h3>
                       <p>{e.blurb}</p>
@@ -86,6 +96,9 @@ export default function Events() {
               {sentence(current.tag)}. {sentence(current.status)}
             </p>
             <h2 id="ev-title">{current.title}</h2>
+            {posterFor(current.poster) && (
+              <img className="event-poster event-poster--modal" src={posterFor(current.poster)} alt={`Poster for ${current.title}`} />
+            )}
             <p>{current.detail}</p>
             <dl className="facts">
               {current.meta.map((m) => (
