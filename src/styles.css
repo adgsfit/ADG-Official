@@ -1,6 +1,7 @@
 /* ───────── Tokens ───────── */
 :root {
-  --font-display: "Syne", "Arial Black", system-ui, sans-serif;
+  --font-display: "Black Ops One", "Arial Black", system-ui, sans-serif;
+  font-synthesis-weight: none;
   --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --r-lg: 22px;
