@@ -1,5 +1,6 @@
 import { formAsks, googleFormUrl, pipeline } from "../data/join.js";
 import { site } from "../data/site.js";
+import SocialLinks from "../components/SocialLinks.jsx";
 
 export default function Join() {
   return (
@@ -48,6 +49,8 @@ export default function Join() {
             </a>
             .
           </p>
+          <p className="social-note">Or find us online:</p>
+          <SocialLinks />
         </div>
       </div>
     </div>

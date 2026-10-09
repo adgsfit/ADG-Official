@@ -12,6 +12,7 @@ export const semesters = [
   { sem: 2, title: 'Semester 2', note: 'Up next · AY 2026–27' }
 ];
 
+// Optional `poster`: file name (no extension) of an image in src/assets/events.
 export const events = [
   {
     id: 'm1',
@@ -20,6 +21,7 @@ export const events = [
     kind: 'GAME',
     status: 'PLANNED',
     title: 'Mosaic: Game of Deception',
+    poster: 'mosaic-poster',
     date: 'DATE NA · TIME NA · VENUE NA',
     blurb: 'Mosaic, our game of deception. Rules, rounds and team format will be shared closer to the date.',
     detail: 'Mosaic is ADG\'s game of deception, planned for Semester 1. The full rules, team format and schedule will be announced together with the date and venue.',
@@ -38,6 +40,7 @@ export const events = [
     kind: 'WORKSHOP',
     status: 'PLANNED',
     title: 'AI in Cybersecurity Workshop',
+    poster: 'ethical-hacking-workshop',
     date: 'DATE NA · TIME NA · VENUE NA',
     blurb: 'A hands-on workshop on how AI is used to defend, and to attack, in cybersecurity.',
     detail: 'A hands-on workshop on the role of AI in cybersecurity, planned for Semester 1. The speaker, tools and exact agenda will be announced together with the date and venue.',

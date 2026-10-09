@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { navLinks, programmeLinks } from "../data/navigation.js";
 import { site } from "../data/site.js";
+import SocialLinks from "./SocialLinks.jsx";
 
 export default function Footer() {
   return (
@@ -17,6 +18,7 @@ export default function Footer() {
             </a>
           </p>
           <p className="foot-sub">Faculty coordinator: {site.facultyCoordinator}</p>
+          <SocialLinks />
         </div>
 
         <nav aria-label="Pages" className="foot-col">
