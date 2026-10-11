@@ -68,7 +68,6 @@ export default function Events() {
                       <h3>{e.title}</h3>
                       <p>{e.blurb}</p>
                       <p className="event-when">{whenLine(e)}</p>
-<<<<<<< HEAD
                       <div className="event-actions">
                         <button type="button" className="btn btn-ghost btn-sm" onClick={() => setOpenId(e.id)}>
                           View details
@@ -84,11 +83,6 @@ export default function Events() {
                           </a>
                         )}
                       </div>
-=======
-                      <button type="button" className="btn btn-ghost btn-sm" onClick={() => setOpenId(e.id)}>
-                        View details
-                      </button>
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
                     </li>
                   ))}
                 </ul>
@@ -126,7 +120,6 @@ export default function Events() {
                 </div>
               ))}
             </dl>
-<<<<<<< HEAD
             {(current.sections ?? [])
               .filter((s) => s.items && s.items.length)
               .map((s) => (
@@ -139,15 +132,12 @@ export default function Events() {
                   </ul>
                 </div>
               ))}
-=======
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
             <h3 className="modal-sub">What you walk away with</h3>
             <ul className="takeaways" role="list">
               {current.takeaways.map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
-<<<<<<< HEAD
             {current.registerUrl && (
               <div className="event-actions event-actions--modal">
                 <a className="btn btn-primary" href={current.registerUrl} target="_blank" rel="noopener noreferrer">
@@ -155,8 +145,6 @@ export default function Events() {
                 </a>
               </div>
             )}
-=======
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
           </>
         )}
       </Modal>
