@@ -31,23 +31,24 @@ export const events = [
 
     // ───────── EDIT HERE: final details for "View details" ─────────
     // 1) Intro paragraph shown under the title.
-    
+    detail: 'Mosaic is ADG\'s flagship game of deception. Participants will be divided into groups to complete technical tasks while uncovering the hidden imposters among them.',
+
     // 2) The fact table. Change `v` values; use 'NA' to show "To be announced".
     meta: [
       { k: 'FORMAT', v: 'Game event' },
       { k: 'DATE', v: '16–17 October 2026' },
-      { k: 'TIME', v: 'NA' },                // <- e.g. '10:00 AM onwards'
+      { k: 'TIME', v: 'To be announced' },
       { k: 'VENUE', v: 'Room No. 028, SFIT' },
-      { k: 'TEAM SIZE', v: 'NA' },            // <- add / remove rows freely
-      { k: 'ENTRY FEE', v: 'NA' },
-      { k: 'ELIGIBILITY', v: 'NA' },
-      { k: 'CONTACT', v: 'NA' }
+      { k: 'TEAM SIZE', v: 'To be announced' },
+      { k: 'ENTRY FEE', v: 'To be announced' },
+      { k: 'ELIGIBILITY', v: 'To be announced' },
+      { k: 'CONTACT', v: 'To be announced' }
     ],
 
     // 3) Extra headed blocks. Add, remove or reorder as needed.
     sections: [
-      { heading: 'Schedule', items:NA },
-      { heading: 'Rules', items: NA },
+      { heading: 'Schedule', items: ['To be announced'] },
+      { heading: 'Rules', items: ['To be announced'] },
       { heading: 'Prizes', items: [] }          // empty = hidden
     ],
 
