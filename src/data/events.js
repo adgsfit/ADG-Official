@@ -13,19 +13,15 @@ export const semesters = [
 ];
 
 // Optional `poster`: file name (no extension) of an image in src/assets/events.
-<<<<<<< HEAD
 // Optional `registerUrl`: shows a "Register" button on the card and in the details popup.
 // Optional `sections`: extra blocks in the details popup, each { heading, items: [...] }.
 //   -> Leave a section out (or its items empty) and it simply doesn't render.
-=======
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
 export const events = [
   {
     id: 'm1',
     sem: 1,
     tag: 'GAME',
     kind: 'GAME',
-<<<<<<< HEAD
     status: 'REGISTRATIONS OPEN',
     title: 'Mosaic: Game of Deception',
     poster: 'deception-poster',
@@ -41,7 +37,7 @@ export const events = [
     meta: [
       { k: 'FORMAT', v: 'Game event' },
       { k: 'DATE', v: '16–17 October 2026' },
-      { k: 'TIME', v: 'NA' },                 // <- e.g. '10:00 AM onwards'
+      { k: 'TIME', v: 'NA' },                // <- e.g. '10:00 AM onwards'
       { k: 'VENUE', v: 'Room No. 028, SFIT' },
       { k: 'TEAM SIZE', v: 'NA' },            // <- add / remove rows freely
       { k: 'ENTRY FEE', v: 'NA' },
@@ -57,20 +53,6 @@ export const events = [
     ],
 
     // 4) Bullet list at the bottom of the popup.
-=======
-    status: 'PLANNED',
-    title: 'Mosaic: Game of Deception',
-    poster: 'mosaic-poster',
-    date: 'DATE NA · TIME NA · VENUE NA',
-    blurb: 'Mosaic, our game of deception. Rules, rounds and team format will be shared closer to the date.',
-    detail: 'Mosaic is ADG\'s game of deception, planned for Semester 1. The full rules, team format and schedule will be announced together with the date and venue.',
-    meta: [
-      { k: 'FORMAT', v: 'Game event' },
-      { k: 'DATE', v: 'NA' },
-      { k: 'TIME', v: 'NA' },
-      { k: 'VENUE', v: 'NA' }
-    ],
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
     takeaways: ['A game night with the committee', 'A certificate of participation']
   },
   {

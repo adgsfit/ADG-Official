@@ -16,8 +16,5 @@ export const site = {
   email: "sfit.aidg@gmail.com",
   facultyCoordinator: "Ms. Priyanka Patil",
   repo: "https://github.com/adgsfit/ADG-Official",
-<<<<<<< HEAD
   registrationUrl: "https://adg-game-reg.onrender.com",
-=======
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
 };
