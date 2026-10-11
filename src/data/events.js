@@ -31,8 +31,7 @@ export const events = [
 
     // ───────── EDIT HERE: final details for "View details" ─────────
     // 1) Intro paragraph shown under the title.
-    detail: 'REPLACE THIS with a 2–3 line overview of Deception: what the game is and who it is for.',
-
+    
     // 2) The fact table. Change `v` values; use 'NA' to show "To be announced".
     meta: [
       { k: 'FORMAT', v: 'Game event' },
@@ -47,8 +46,8 @@ export const events = [
 
     // 3) Extra headed blocks. Add, remove or reorder as needed.
     sections: [
-      { heading: 'Schedule', items: ['Day 1 (16 Oct): REPLACE', 'Day 2 (17 Oct): REPLACE'] },
-      { heading: 'Rules', items: ['REPLACE with rule 1', 'REPLACE with rule 2'] },
+      { heading: 'Schedule', items:NA },
+      { heading: 'Rules', items: NA },
       { heading: 'Prizes', items: [] }          // empty = hidden
     ],
 
