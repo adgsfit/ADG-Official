@@ -13,12 +13,51 @@ export const semesters = [
 ];
 
 // Optional `poster`: file name (no extension) of an image in src/assets/events.
+<<<<<<< HEAD
+// Optional `registerUrl`: shows a "Register" button on the card and in the details popup.
+// Optional `sections`: extra blocks in the details popup, each { heading, items: [...] }.
+//   -> Leave a section out (or its items empty) and it simply doesn't render.
+=======
+>>>>>>> a1769df8d4620e399946eeb4f20636286717c739
 export const events = [
   {
     id: 'm1',
     sem: 1,
     tag: 'GAME',
     kind: 'GAME',
+<<<<<<< HEAD
+    status: 'REGISTRATIONS OPEN',
+    title: 'Mosaic: Game of Deception',
+    poster: 'deception-poster',
+    registerUrl: 'https://adg-game-reg.onrender.com',
+    date: '16–17 OCTOBER 2026 · TIME NA · ROOM NO. 028, SFIT',
+    blurb: 'Complete tasks. Watch closely. Find the imposter. Vote. Mosaic, our game of deception.',
+
+    // ───────── EDIT HERE: final details for "View details" ─────────
+    // 1) Intro paragraph shown under the title.
+    detail: 'REPLACE THIS with a 2–3 line overview of Deception: what the game is and who it is for.',
+
+    // 2) The fact table. Change `v` values; use 'NA' to show "To be announced".
+    meta: [
+      { k: 'FORMAT', v: 'Game event' },
+      { k: 'DATE', v: '16–17 October 2026' },
+      { k: 'TIME', v: 'NA' },                 // <- e.g. '10:00 AM onwards'
+      { k: 'VENUE', v: 'Room No. 028, SFIT' },
+      { k: 'TEAM SIZE', v: 'NA' },            // <- add / remove rows freely
+      { k: 'ENTRY FEE', v: 'NA' },
+      { k: 'ELIGIBILITY', v: 'NA' },
+      { k: 'CONTACT', v: 'NA' }
+    ],
+
+    // 3) Extra headed blocks. Add, remove or reorder as needed.
+    sections: [
+      { heading: 'Schedule', items: ['Day 1 (16 Oct): REPLACE', 'Day 2 (17 Oct): REPLACE'] },
+      { heading: 'Rules', items: ['REPLACE with rule 1', 'REPLACE with rule 2'] },
+      { heading: 'Prizes', items: [] }          // empty = hidden
+    ],
+
+    // 4) Bullet list at the bottom of the popup.
+=======
     status: 'PLANNED',
     title: 'Mosaic: Game of Deception',
     poster: 'mosaic-poster',
@@ -31,6 +70,7 @@ export const events = [
       { k: 'TIME', v: 'NA' },
       { k: 'VENUE', v: 'NA' }
     ],
+>>>>>>> a1769df8d4620e399946eeb4f20636286717c739
     takeaways: ['A game night with the committee', 'A certificate of participation']
   },
   {
