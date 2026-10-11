@@ -4,11 +4,8 @@ import CommitteeCard from "../components/CommitteeCard.jsx";
 import { useToast } from "../components/Toast.jsx";
 import { badgeQuips, marqueeDomains, terminalLines } from "../data/navigation.js";
 import { prefersReduced } from "../utils/hooks.js";
-<<<<<<< HEAD
 import { site } from "../data/site.js";
 import deceptionPoster from "../assets/home/deception-home-poster.jpg";
-=======
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
 
 const DIRECTORY = [
   {
@@ -111,14 +108,10 @@ export default function Home() {
               demoed to an actual room of actual people.
             </p>
             <div className="actions">
-<<<<<<< HEAD
               <a className="btn btn-primary" href={site.registrationUrl} target="_blank" rel="noopener noreferrer">
                 Register for Deception
               </a>
               <Link className="btn btn-ghost" to="/join">
-=======
-              <Link className="btn btn-primary" to="/join">
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
                 Join the committee
               </Link>
               <Link className="btn btn-ghost" to="/events">
@@ -157,7 +150,6 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Overriding the default section top padding/margin to pull the layout up */}
       <section className="section home-feature" aria-labelledby="deception-title" style={{ paddingTop: '2rem', marginTop: 0 }}>
         <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
@@ -202,8 +194,6 @@ export default function Home() {
         </div>
       </section>
 
-=======
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
       <section className="marquee" aria-label="What we work with">
         <div className="marquee-track">
           {[...marqueeDomains, ...marqueeDomains].map((d, i) => (
@@ -237,8 +227,4 @@ export default function Home() {
       </section>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a1769df8d4620e399946eeb4f20636286717c739
