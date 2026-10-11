@@ -39,21 +39,19 @@ export const events = [
       { k: 'DATE', v: '16–17 October 2026' },
       { k: 'TIME', v: 'To be announced' },
       { k: 'VENUE', v: 'Room No. 028, SFIT' },
-      { k: 'TEAM SIZE', v: 'To be announced' },
-      { k: 'ENTRY FEE', v: 'To be announced' },
-      { k: 'ELIGIBILITY', v: 'To be announced' },
-      { k: 'CONTACT', v: 'To be announced' }
+      { k: 'TEAM SIZE', v: '5-6 people' },
+      { k: 'ENTRY FEE', v: '50 per person' },
+      { k: 'ELIGIBILITY', v: 'All Engineers' },
+      { k: 'CONTACT', v: ' sfit.aidg@gmail.com' }
     ],
 
     // 3) Extra headed blocks. Add, remove or reorder as needed.
     sections: [
-      { heading: 'Schedule', items: ['To be announced'] },
-      { heading: 'Rules', items: ['To be announced'] },
       { heading: 'Prizes', items: [] }          // empty = hidden
     ],
 
     // 4) Bullet list at the bottom of the popup.
-    takeaways: ['A game night with the committee', 'A certificate of participation']
+    takeaways: ['Unforgettable memories', 'New friends (and maybe a few trust issues)']
   },
   {
     id: 'c1',
