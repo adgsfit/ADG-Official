@@ -37,7 +37,7 @@ export const events = [
     meta: [
       { k: 'FORMAT', v: 'Game event' },
       { k: 'DATE', v: '16–17 October 2026' },
-      { k: 'TIME', v: 'To be announced' },
+      { k: 'TIME', v: '9 am to 5 pm' },
       { k: 'VENUE', v: 'Room No. 028, SFIT' },
       { k: 'TEAM SIZE', v: '5-6 people' },
       { k: 'ENTRY FEE', v: '50 per person' },
